@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+import Live from '../../components/Live.astro';
+import { cities, label, shortLabel, today, yearFacts, ramadanFacts, mosques, nearby, cityUrl, methodText, type City } from '../../lib/site';
+import { defaultMethod, qiblaBearing, kaabaKm, compass, longDate } from '../../lib/salah.mjs';
+export function getStaticPaths() { return cities.map((c) => ({ params: { city: c.slug }, props: { c } })); }
+const { c } = Astro.props as { c: City };
+const t = today(c), y = yearFacts(c), r = ramadanFacts(c), q = qiblaBearing(c.lat, c.lon), km = Math.round(kaabaKm(c.lat, c.lon));
+const method = defaultMethod(c.country), ms = mosques(c), near = nearby(c), name = shortLabel(c);
+const dateText = longDate(t.y, t.m, t.d).replace(/^\w+, /, '');
+const closest = near[0], other = today(closest);
+const gap = (a: Date, b: Date) => Math.round((a.getTime() - b.getTime()) / 60000);
+const say = (n: number, what: string) => n === 0 ? `${what} is at the same moment as in ${shortLabel(closest)}` : `${what} comes ${Math.abs(n)} minute${Math.abs(n) === 1 ? '' : 's'} ${n > 0 ? 'later' : 'earlier'} than in ${shortLabel(closest)}`;
+const compare = `${say(gap(t.p.fajr, other.p.fajr), 'Fajr')}, and ${say(gap(t.p.maghrib, other.p.maghrib), 'Maghrib').replace(` than in ${shortLabel(closest)}`, '').replace(` as in ${shortLabel(closest)}`, '')}.`;
+const noDst = c.tz === 'America/Phoenix' ? ' Arizona does not use daylight saving, so clock times here shift only with the seasons.' : '';
+---
+<Base title={`Prayer Times in ${name} Today: Fajr, Maghrib, Isha`} description={`${name} prayer times for ${dateText}: Fajr ${t.cells.fajr}, Dhuhr ${t.cells.dhuhr}, Asr ${t.cells.asr}, Maghrib ${t.cells.maghrib}, Isha ${t.cells.isha}. Monthly timetable and Qibla.`} crumbs={[['Cities', '/cities/'], [name]]}>
+  <h1>Prayer Times in {name} Today</h1>
+  <Live city={c} method={method} />
+
+  <p>{label(c)}: {compare}{noDst}</p>
+  <p class="small">{methodText(method)}, at {Math.abs(c.lat).toFixed(2)}°{c.lat >= 0 ? 'N' : 'S'}, {Math.abs(c.lon).toFixed(2)}°{c.lon >= 0 ? 'E' : 'W'}. <a href="/calculation-methods/">Compare methods</a>.{c.lat > 48 ? ' Summer Fajr and Isha at this latitude vary by authority.' : ''}</p>
+
+  <h2>{name} through the year</h2>
+  <div class="tbl"><table><tbody>
+    <tr><td>Earliest Fajr</td><td class="n">{y.earlyFajr.at}</td><td>{y.earlyFajr.date}</td></tr>
+    <tr><td>Latest Fajr</td><td class="n">{y.lateFajr.at}</td><td>{y.lateFajr.date}</td></tr>
+    <tr><td>Earliest Maghrib</td><td class="n">{y.earlyMaghrib.at}</td><td>{y.earlyMaghrib.date}</td></tr>
+    <tr><td>Latest Maghrib</td><td class="n">{y.lateMaghrib.at}</td><td>{y.lateMaghrib.date}</td></tr>
+    <tr><td>Longest fast</td><td class="n">{y.longDay.at}</td><td>{y.longDay.date}</td></tr>
+    <tr><td>Shortest fast</td><td class="n">{y.shortDay.at}</td><td>{y.shortDay.date}</td></tr>
+  </tbody></table></div>
+
+  <h2>{name} in Ramadan 2027</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Expected date (moon sighting decides)</th><th class="n">Sehri ends</th><th class="n">Iftar</th><th class="n">Fast</th></tr></thead>
+    <tbody>
+      <tr><td>{r.firstDate}, first day</td><td class="n">{r.sehriFirst}</td><td class="n">{r.iftarFirst}</td><td class="n">{r.fastFirst}</td></tr>
+      <tr><td>{r.lastDate}, last day</td><td class="n">{r.sehriLast}</td><td class="n">{r.iftarLast}</td><td class="n">{r.fastLast}</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small"><a href="/ramadan-2027/">Daily calendar</a></p>
+
+  <h2>Qibla from {name}</h2>
+  <p><strong>{q.toFixed(1)}° from true north</strong>, roughly {compass(q)}. Makkah is {km.toLocaleString('en-US')} km ({Math.round(km * 0.621371).toLocaleString('en-US')} miles) away. <a href="/qibla-direction/">Exact finder</a>.</p>
+
+  {ms.length > 0 && <>
+    <h2>Mosques near {name}</h2>
+    <ul>{ms.map((m) => <li>{m.web ? <a href={m.web} rel="nofollow noopener">{m.name}</a> : m.name}{m.area && m.area.toLowerCase() !== c.name.toLowerCase() ? `, ${m.area}` : ''} ({m.km} km)</li>)}</ul>
+    <p class="small">From OpenStreetMap, within 20 km of the city center. Check with each for iqamah and Jumu'ah.</p>
+  </>}
+
+  <h2>Nearby cities</h2>
+  <ul class="near">{near.map((o) => <li><a href={cityUrl(o)}>{shortLabel(o)}</a></li>)}</ul>
+</Base>

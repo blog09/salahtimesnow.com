@@ -1,0 +1,24 @@
+---
+// One page per prayer: when it starts and ends, then today's time in the largest cities.
+import Base from '../layouts/Base.astro';
+import { cities, cityUrl, shortLabel, today } from '../lib/site';
+import { PAGES } from '../data/prayers.mjs';
+export function getStaticPaths() { return Object.entries(PAGES).map(([prayer, page]) => ({ params: { prayer }, props: { page } })); }
+const { page } = Astro.props as { page: (typeof PAGES)['fajr-time'] };
+const rows = cities.slice(0, 24).map((c) => ({ c, t: today(c) })).sort((a, b) => shortLabel(a.c).localeCompare(shortLabel(b.c)));
+const others = Object.entries(PAGES).filter(([, p]) => p.key !== page.key);
+---
+<Base title={`${page.name} Time Today: When It Starts and Ends`} description={`${page.lead} See today's ${page.name} time in ${page.cities} and more cities.`} crumbs={[[`${page.name} time`]]}>
+  <h1>{page.name} time today</h1>
+  <p class="hl">{page.lead}</p>
+  <h2>Why {page.name} times vary</h2>
+  <p>{page.why}</p>
+  <p>{page.tip}</p>
+  <h2>{page.name} today in major cities</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>City</th><th class="n">{page.name}</th></tr></thead>
+    <tbody>{rows.map(({ c, t }) => <tr><td><a href={cityUrl(c)}>{shortLabel(c)}</a></td><td class="n">{t.cells[page.key]}</td></tr>)}</tbody>
+  </table></div>
+  <p class="small">Each city's own default method. <a href="/calculation-methods/">Compare methods</a> · <a href="/cities/">All cities</a></p>
+  <ul class="near">{others.map(([slug, p]) => <li><a href={`/${slug}/`}>{p.name} time</a></li>)}</ul>
+</Base>

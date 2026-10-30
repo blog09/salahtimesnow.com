@@ -1,0 +1,52 @@
+{
+"new-york": [
+{
+"name": "Masjid Manhattan",
+"km": 0.5,
+"area": "New York",
+"web": "https://masjidmanhattan.com/"
+},
+{
+"name": "Assafa Islamic Center",
+"km": 1.5,
+"area": "",
+"web": "https://assafaislamiccenter.org/"
+},
+{
+"name": "Islamic Center at NYU",
+"km": 2.0,
+"area": "",
+"web": "https://www.icnyu.org/"
+},
+{
+"name": "Madina Masjid",
+"km": 2.6,
+"area": "New York",
+"web": "https://nycmadinamasjid.org/"
+},
+{
+"name": "Ibaadu'rrahman Central Mosque",
+"km": 3.7,
+"area": "",
+"web": "https://ibaadurahman.com"
+},
+{
+"name": "Masjid Ar-Rahman",
+"km": 4.0,
+"area": "",
+"web": "https://masjidarrahmannyc.org/"
+},
+{
+"name": "Muslim Federation of NJ",
+"km": 4.7,
+"area": "Jersey City",
+"web": "https://www.mfnj.net"
+},
+{
+"name": "Masjid Al Imam Al Albani",
+"km": 4.8,
+"area": "",
+"web": ""
+}
+]
+}

@@ -1,0 +1,23 @@
+// One entry per daily prayer page.
+export const PAGES = {
+  'fajr-time': { key: 'fajr', name: 'Fajr', cities: 'New York, Chicago and London',
+    lead: 'Fajr, the dawn prayer, begins at true dawn, when light first spreads across the horizon, and its time ends at sunrise.',
+    why: 'Dawn has no sharp edge, so calculation methods set it at a chosen sun angle below the horizon. A 15° angle (ISNA) gives a later Fajr than 18° (Muslim World League), often by 15 to 30 minutes in North America. That gap is the most common reason two timetables disagree.',
+    tip: 'For fasting, this is also the time eating must stop. Many people finish a few minutes early to leave a margin.' },
+  'dhuhr-time': { key: 'dhuhr', name: 'Dhuhr', cities: 'Houston, Toronto and Birmingham',
+    lead: 'Dhuhr, the midday prayer, begins just after the sun passes its highest point and continues until Asr begins.',
+    why: 'Because it follows solar noon, Dhuhr is the one prayer on which all calculation methods agree. It rarely falls at 12:00 on the clock: time zones, daylight saving and the time of year can move it past 1:00 PM.',
+    tip: 'On Friday, Jumu\'ah replaces Dhuhr in congregation. Mosques set their own Jumu\'ah times, often later than the start of Dhuhr.' },
+  'asr-time': { key: 'asr', name: 'Asr', cities: 'Philadelphia, Mississauga and Manchester',
+    lead: 'Asr, the afternoon prayer, begins when an object\'s shadow reaches a set length and continues until sunset.',
+    why: 'Schools differ on that length. Shafi\'i, Maliki and Hanbali scholars count one shadow-length plus the noon shadow; the Hanafi school counts two. Hanafi Asr is therefore later, often by about an hour, and more in summer at northern latitudes.',
+    tip: 'City pages show both. Choose your school in the Asr setting and the timetable updates.' },
+  'maghrib-time': { key: 'maghrib', name: 'Maghrib', cities: 'Seattle, Ottawa and Bradford',
+    lead: 'Maghrib, the sunset prayer, begins as soon as the sun has fully set and lasts until the twilight has gone.',
+    why: 'Sunset is a clear event, so nearly all methods give the same Maghrib time. Local hills and tall buildings do not change the calculated time, which assumes a flat horizon, so some mosques add a few minutes as a safety margin.',
+    tip: 'This is iftar time during Ramadan. Check your mosque\'s timetable if it adds a margin.' },
+  'isha-time': { key: 'isha', name: 'Isha', cities: 'Boston, Calgary and Glasgow',
+    lead: 'Isha, the night prayer, begins once twilight has disappeared and, in the main view, its preferred time runs until the middle of the night.',
+    why: 'Like Fajr, it depends on a chosen sun angle. Far north in summer, the sun may never go low enough, so timetables use a high-latitude rule that divides the night instead. Some timetables, such as Umm al-Qura, use a fixed gap after Maghrib.',
+    tip: 'Scholars differ on when Isha finally ends. Praying before the middle of the night is the widely preferred practice.' },
+};

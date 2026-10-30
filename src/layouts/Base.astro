@@ -1,0 +1,85 @@
+---
+import { mark } from '../brand.mjs';
+interface Props { title: string; description: string; schema?: object[]; crumbs?: [string, string?][] }
+const { title, description, schema = [], crumbs = [] } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const home = new URL('/', Astro.site).href;
+// Google shows ~155-160 characters: trim long descriptions at a word boundary
+const desc = description.length > 160 ? description.slice(0, 157).replace(/\s+\S*$/, '') + '…' : description;
+const ld = [...schema];
+if (Astro.url.pathname === '/') ld.unshift({ '@context': 'https://schema.org', '@type': 'WebSite', name: 'SalahTimesNow', url: home, publisher: { '@type': 'Organization', name: 'SalahTimesNow', url: home, logo: new URL('/logo.png', Astro.site).href } });
+if (crumbs.length) ld.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [['Home', '/'] as [string, string?], ...crumbs].map(([name, url], i) => ({ '@type': 'ListItem', position: i + 1, name, item: new URL(url ?? Astro.url.pathname, Astro.site).href })) });
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={desc} />
+<link rel="canonical" href={canonical} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="SalahTimesNow" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={desc} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={new URL('/og.png', Astro.site).href} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#064e3b" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+{ld.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+<style is:global>
+  :root { --text:#1c2b26; --soft:#5f6f69; --line:#d1fae5; --grn:#047857; --deep:#064e3b; --amb:#b45309; }
+  * { box-sizing:border-box; }
+  body { margin:0; color:var(--text); background:#fbfdfc; font:17px/1.62 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif; }
+  a { color:var(--grn); }
+  .col { max-width:900px; margin:0 auto; padding:0 16px; }
+  .top { background:var(--deep); }
+  .top .col { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:6px 16px; padding-top:9px; padding-bottom:9px; }
+  .brand { display:flex; align-items:center; gap:9px; font-weight:800; font-size:20px; color:#fff; text-decoration:none; }
+  .brand b { color:#fbbf24; }
+  .top nav { display:flex; flex-wrap:wrap; gap:4px 12px; font-size:15px; }
+  .top nav a { color:#ecfdf5; text-decoration:none; padding:2px 8px; border-radius:6px; } .top nav a:hover { background:#047857; }
+  h1 { font-size:clamp(28px,4.8vw,40px); line-height:1.15; margin:24px 0 10px; color:var(--deep); }
+  h2 { font-size:22px; margin:34px 0 10px; color:var(--deep); }
+  .crumb { font-size:14px; color:var(--soft); margin-top:14px; } .crumb a { color:var(--soft); }
+  .hl { font-size:18.5px; background:#fff; border:1px solid var(--line); border-left:5px solid var(--grn); padding:14px 18px; border-radius:8px; }
+  .prayers { display:grid; grid-template-columns:repeat(auto-fit,minmax(125px,1fr)); gap:10px; margin:16px 0 8px; }
+  .prayers div { background:#fff; border:1px solid var(--line); border-radius:10px; padding:10px 12px; }
+  .prayers div.next { background:#064e3b; border-color:#064e3b; color:#fff; } .prayers div.next span { color:#a7f3d0; } .prayers div.next b { color:#fff; }
+  .prayers b { display:block; font-size:23px; color:var(--deep); font-variant-numeric:tabular-nums; }
+  .prayers span { font-size:14px; color:var(--soft); }
+  .tbl { overflow-x:auto; } table { width:100%; border-collapse:collapse; font-size:15px; background:#fff; }
+  th, td { padding:6px 9px; border-bottom:1px solid var(--line); text-align:left; white-space:nowrap; } th { color:var(--soft); font-size:13.5px; font-weight:600; }
+  td.n, th.n { text-align:right; font-variant-numeric:tabular-nums; }
+  tr.me td { background:#d1fae5; font-weight:700; }
+  .near { display:flex; flex-wrap:wrap; gap:6px; padding:0; list-style:none; }
+  .near a { display:block; padding:5px 10px; border:1px solid var(--line); border-radius:8px; background:#fff; text-decoration:none; font-size:15px; }
+  .near a:hover { border-color:var(--grn); }
+  .tool { background:#fff; border:2px solid var(--grn); border-radius:12px; padding:14px 16px; margin:16px 0; }
+  .tool label { display:inline-flex; flex-direction:column; font-size:13.5px; color:var(--soft); margin:0 10px 8px 0; }
+  .tool input, .tool select { font:inherit; min-width:150px; max-width:100%; padding:6px 8px; border:1px solid #6ee7b7; border-radius:8px; background:#fff; }
+  .tool button, .btn { font:inherit; font-weight:600; color:#fff; background:var(--grn); border:0; border-radius:8px; padding:8px 14px; cursor:pointer; }
+  .small { font-size:14px; color:var(--soft); }
+  .pair { display:grid; grid-template-columns:1.1fr 1fr; gap:22px; align-items:center; } .pair svg { width:100%; height:auto; }
+  @media (max-width:700px) { .pair { grid-template-columns:1fr; } }
+  footer { margin-top:44px; border-top:1px solid var(--line); background:#fff; font-size:14.5px; color:var(--soft); }
+  footer .col { padding-top:18px; padding-bottom:24px; }
+</style>
+</head>
+<body>
+<header class="top"><div class="col">
+  <a class="brand" href="/" aria-label="SalahTimesNow home"><Fragment set:html={mark(30)} /><span>Salah<b>TimesNow</b></span></a>
+  <nav><a href="/cities/">Cities</a><a href="/qibla-direction/">Qibla</a><a href="/ramadan-2027/">Ramadan 2027</a><a href="/hijri-date-today/">Hijri date</a><a href="/calculation-methods/">Methods</a></nav>
+</div></header>
+<main class="col">
+  {crumbs.length > 0 && <p class="crumb"><a href="/">Home</a>{crumbs.map(([n, u]) => <> › {u ? <a href={u}>{n}</a> : n}</>)}</p>}
+  <slot />
+</main>
+<footer><div class="col">
+  <p><strong>SalahTimesNow</strong> calculates prayer times from the sun's position for each city. They are astronomical estimates: your local mosque's timetable comes first, especially for iqamah and Jumu'ah.</p>
+  <p><a href="/about/">About</a> · <a href="/sources/">How we calculate</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import { todayIn, hijriText, longDate } from '../lib/salah.mjs';
+const [y, m, d] = todayIn('UTC');
+const MONTHS = ['Muharram', 'Safar', 'Rabi al-Awwal', 'Rabi al-Thani', 'Jumada al-Awwal', 'Jumada al-Thani', 'Rajab', "Sha'ban", 'Ramadan', 'Shawwal', "Dhu al-Qa'dah", 'Dhu al-Hijjah'];
+---
+<Base title="Hijri Date Today: Islamic Calendar Date and Converter" description={`Today's Hijri date is ${hijriText(y, m, d)} by the Umm al-Qura calendar. Convert any Gregorian date to the Islamic calendar.`} crumbs={[['Hijri date today']]}>
+  <h1>Hijri date today</h1>
+  <p class="hl"><strong id="h-today">{hijriText(y, m, d)}</strong>, which is <span id="g-today">{longDate(y, m, d)}</span>.</p>
+  <p>This uses the Umm al-Qura calendar, Saudi Arabia's calculated calendar. Countries and mosques that begin each month by sighting the moon can be a day apart, and the Islamic day begins at sunset, not midnight.</p>
+  <div class="tool">
+    <label>Convert a date <input type="date" id="h-in" /></label>
+    <p id="h-out"></p>
+  </div>
+  <h2>The twelve Hijri months</h2>
+  <ol>{MONTHS.map((x) => <li>{x}</li>)}</ol>
+  <p>A Hijri year is 354 or 355 days, about 11 days shorter than a solar year. That is why <a href="/ramadan-2027/">Ramadan</a> moves earlier each year and passes through every season over about 33 years.</p>
+</Base>
+<script>
+  import { hijriText, longDate } from '../lib/salah.mjs';
+  const n = new Date(), ymd = [n.getFullYear(), n.getMonth() + 1, n.getDate()] as const;
+  document.getElementById('h-today')!.textContent = hijriText(...ymd);
+  document.getElementById('g-today')!.textContent = longDate(...ymd);
+  const i = document.getElementById('h-in') as HTMLInputElement, o = document.getElementById('h-out')!;
+  i.addEventListener('change', () => { if (!i.value) return; const [y, m, d] = i.value.split('-').map(Number); o.textContent = `${longDate(y, m, d)} is ${hijriText(y, m, d)}.`; });
+</script>

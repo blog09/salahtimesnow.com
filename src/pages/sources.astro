@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="How We Calculate Prayer Times | SalahTimesNow" description="The astronomy library, calculation methods, Hijri calendar and mosque data behind SalahTimesNow, and how we check our times against an independent source." crumbs={[['How we calculate']]}>
+  <h1>How we calculate prayer times</h1>
+  <ul>
+    <li><strong>Astronomy:</strong> the open-source <a href="https://github.com/batoulapps/adhan-js" rel="noopener">Adhan</a> library, which uses high-precision solar equations from Jean Meeus's <em>Astronomical Algorithms</em>.</li>
+    <li><strong>Methods:</strong> ISNA by default in the US and Canada; Moonsighting Committee by default in the UK. See <a href="/calculation-methods/">all methods</a>.</li>
+    <li><strong>High latitudes:</strong> above 48° latitude, Fajr stays within the last seventh of the night and Isha within the first seventh. Authorities use different rules here, so June timetables can vary by an hour.</li>
+    <li><strong>Method margins:</strong> the Moonsighting Committee method adds 5 minutes to Dhuhr and 3 to Maghrib, as that method specifies.</li>
+    <li><strong>Hijri dates:</strong> the Umm al-Qura calendar. Moon sighting can differ by a day.</li>
+    <li><strong>Time zones and clock changes:</strong> the IANA time zone database, built into your browser.</li>
+    <li><strong>Mosques:</strong> © <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> contributors, under the Open Database License. Listings may be incomplete or out of date.</li>
+  </ul>
+  <h2>How we check accuracy</h2>
+  <p>Before release we compared our times with the independent <a href="https://aladhan.com/prayer-times-api" rel="noopener">AlAdhan API</a> for 10 cities on 5 dates under the same method. Sunrise agreed within a minute. Asr usually agreed within 2 to 4 minutes, and Fajr and Isha agreed closely except in June at high latitudes, where the two services apply different rules. The check is repeatable and lives in the site's code.</p>
+  <h2>Limits</h2>
+  <p>Calculated times assume a flat horizon at the city center. They cannot replace your mosque's timetable or a scholar's judgment. If you spot an error, please <a href="/contact/">tell us</a>.</p>
+</Base>

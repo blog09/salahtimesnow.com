@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import { cities, cityUrl, shortLabel } from '../lib/site';
+import { qiblaBearing, kaabaKm, compass } from '../lib/salah.mjs';
+const rows = cities.map((c) => ({ c, q: qiblaBearing(c.lat, c.lon), km: Math.round(kaabaKm(c.lat, c.lon)) })).sort((a, b) => shortLabel(a.c).localeCompare(shortLabel(b.c)));
+---
+<Base title="Qibla Direction Finder: Bearing From Your Location" description="Find the Qibla direction from your location in degrees from true north, with a compass dial, plus the bearing and distance to Makkah from cities in the US, UK and Canada." crumbs={[['Qibla direction']]}>
+  <h1>Qibla direction finder</h1>
+  <p>The Qibla is the direction of the Kaaba in Makkah. It follows the shortest path over the globe, which is why it points northeast from most of North America rather than southeast as a flat map suggests.</p>
+  <div class="tool">
+    <button type="button" id="q-locate">Find my Qibla</button>
+    <p id="q-out" class="small">Your location stays on your device.</p>
+    <svg id="q-dial" viewBox="0 0 200 200" width="220" height="220" role="img" aria-label="Compass dial pointing to the Qibla" hidden>
+      <circle cx="100" cy="100" r="92" fill="#ecfdf5" stroke="#047857" stroke-width="3"/>
+      <text x="100" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#064e3b">N</text><text x="180" y="105" text-anchor="middle" font-size="13" fill="#5f6f69">E</text><text x="100" y="188" text-anchor="middle" font-size="13" fill="#5f6f69">S</text><text x="20" y="105" text-anchor="middle" font-size="13" fill="#5f6f69">W</text>
+      <g id="q-needle"><path d="M100 100L92 104 100 32 108 104z" fill="#b45309"/><circle cx="100" cy="100" r="6" fill="#064e3b"/></g>
+    </svg>
+    <p class="small">Turn until north on your compass lines up with N on the dial. Phone compasses can be several degrees off near metal or cars: use a landmark or the sun to check.</p>
+  </div>
+  <h2>Qibla from cities</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>City</th><th class="n">Degrees from north</th><th>Direction</th><th class="n">Distance to Makkah</th></tr></thead>
+    <tbody>{rows.map(({ c, q, km }) => <tr><td><a href={cityUrl(c)}>{shortLabel(c)}</a></td><td class="n">{q.toFixed(1)}°</td><td>{compass(q)}</td><td class="n">{km.toLocaleString('en-US')} km</td></tr>)}</tbody>
+  </table></div>
+</Base>
+<script>
+  import { qiblaBearing, kaabaKm, compass } from '../lib/salah.mjs';
+  const out = document.getElementById('q-out')!;
+  document.getElementById('q-locate')!.addEventListener('click', () => {
+    if (!navigator.geolocation) { out.textContent = 'Your browser does not share location. Use the table below.'; return; }
+    out.textContent = 'Finding your location…';
+    navigator.geolocation.getCurrentPosition((g) => {
+      const q = qiblaBearing(g.coords.latitude, g.coords.longitude);
+      out.innerHTML = `<strong>${q.toFixed(1)}° from true north</strong> (${compass(q)}). Makkah is about ${Math.round(kaabaKm(g.coords.latitude, g.coords.longitude)).toLocaleString('en-US')} km away.`;
+      document.getElementById('q-dial')!.removeAttribute('hidden');
+      document.getElementById('q-needle')!.setAttribute('transform', `rotate(${q} 100 100)`);
+    }, () => { out.textContent = 'Location was not available. Use the table below.'; }, { timeout: 10000 });
+  });
+</script>

@@ -1,0 +1,66 @@
+---
+import Base from '../layouts/Base.astro';
+import { hero } from '../brand.mjs';
+import { cities, cityUrl, shortLabel, today, COUNTRIES, COUNTRY_NAME } from '../lib/site';
+import { todayIn, longDate, hijriText } from '../lib/salah.mjs';
+const [y, m, d] = todayIn('UTC');
+const top = (country: string) => cities.filter((c) => c.country === country).slice(0, 8).map((c) => ({ c, t: today(c) }));
+---
+<Base title="Prayer Times Today for Your City | SalahTimesNow" description="Today's prayer times from Fajr to Isha for your location or city, with monthly timetables, Qibla direction and Ramadan 2027 dates. No app or sign-up needed.">
+  <div class="pair">
+    <div>
+      <h1>Prayer times for your city today</h1>
+      <p>Fajr, Dhuhr, Asr, Maghrib and Isha, calculated from the sun's position where you are. {longDate(y, m, d)} is {hijriText(y, m, d)}.</p>
+      <div class="tool">
+        <button type="button" id="locate">Use my location</button>
+        <label style="margin-top:8px">Or pick a city
+          <input id="pick" list="city-list" placeholder="Start typing a city" autocomplete="off" />
+        </label>
+        <datalist id="city-list">{cities.map((c) => <option value={`${shortLabel(c)} (${c.country})`} data-url={cityUrl(c)} />)}</datalist>
+        <p class="small" id="locate-out">Your location stays on your device: it is never sent to us.</p>
+      </div>
+    </div>
+    <Fragment set:html={hero()} />
+  </div>
+  <div id="here" hidden>
+    <h2>Prayer times at your location</h2>
+    <div class="prayers" id="here-cards"></div>
+    <p class="small" id="here-note"></p>
+  </div>
+
+  {COUNTRIES.map((k) => <>
+    <h2>Today in {COUNTRY_NAME[k]}</h2>
+    <div class="tbl"><table>
+      <thead><tr><th>City</th><th class="n">Fajr</th><th class="n">Dhuhr</th><th class="n">Asr</th><th class="n">Maghrib</th><th class="n">Isha</th></tr></thead>
+      <tbody>{top(k).map(({ c, t }) => <tr><td><a href={cityUrl(c)}>{shortLabel(c)}</a></td><td class="n">{t.cells.fajr}</td><td class="n">{t.cells.dhuhr}</td><td class="n">{t.cells.asr}</td><td class="n">{t.cells.maghrib}</td><td class="n">{t.cells.isha}</td></tr>)}</tbody>
+    </table></div>
+  </>)}
+  <p><a href="/cities/">See all {cities.length} cities</a>.</p>
+
+  <h2>What each prayer time means</h2>
+  <ul class="near">
+    <li><a href="/fajr-time/">Fajr</a></li><li><a href="/dhuhr-time/">Dhuhr</a></li><li><a href="/asr-time/">Asr</a></li><li><a href="/maghrib-time/">Maghrib</a></li><li><a href="/isha-time/">Isha</a></li><li><a href="/rakats-in-each-prayer/">Rakats in each prayer</a></li>
+  </ul>
+</Base>
+<script>
+  import { times, clock, todayIn, PRAYERS } from '../lib/salah.mjs';
+  const pick = document.getElementById('pick') as HTMLInputElement;
+  pick.addEventListener('change', () => {
+    const o = [...document.querySelectorAll<HTMLOptionElement>('#city-list option')].find((x) => x.value === pick.value);
+    if (o) location.href = o.dataset.url!;
+  });
+  const out = document.getElementById('locate-out')!;
+  document.getElementById('locate')!.addEventListener('click', () => {
+    if (!navigator.geolocation) { out.textContent = 'Your browser does not share location. Please pick a city.'; return; }
+    out.textContent = 'Finding your location…';
+    navigator.geolocation.getCurrentPosition((g) => {
+      const { latitude: la, longitude: lo } = g.coords, tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const method = la > 24 && lo < -30 ? 'NorthAmerica' : tz.startsWith('Europe/London') ? 'MoonsightingCommittee' : 'MuslimWorldLeague';
+      const [y, m, d] = todayIn(tz), p: any = times(la, lo, y, m, d, method);
+      document.getElementById('here-cards')!.innerHTML = PRAYERS.map(([k, n]) => `<div><span>${n}</span><b>${clock(p[k], tz)}</b></div>`).join('');
+      document.getElementById('here-note')!.textContent = `Calculated for ${la.toFixed(2)}, ${lo.toFixed(2)} in your device's time zone (${tz}).`;
+      document.getElementById('here')!.hidden = false;
+      out.textContent = 'Done. Your location was not sent anywhere.';
+    }, () => { out.textContent = 'Location was not available. Please pick a city.'; }, { timeout: 10000, maximumAge: 600000 });
+  });
+</script>

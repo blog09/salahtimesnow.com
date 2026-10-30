@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import { cities, cityUrl, shortLabel, COUNTRIES, COUNTRY_NAME } from '../lib/site';
+---
+<Base title="Prayer Times by City: US, UK and Canada" description={`Prayer times, monthly timetables and Qibla direction for ${cities.length} cities in the United States, the United Kingdom and Canada.`} crumbs={[['Cities']]}>
+  <h1>Prayer times by city</h1>
+  <p>Choose a city for today's times, a monthly timetable, the Qibla bearing and nearby mosques. Not listed? <a href="/">Use your location</a> on the home page, which works anywhere.</p>
+  {COUNTRIES.map((k) => <>
+    <h2>{COUNTRY_NAME[k]}</h2>
+    <ul class="near">{cities.filter((c) => c.country === k).sort((a, b) => a.name.localeCompare(b.name)).map((c) => <li><a href={cityUrl(c)}>{shortLabel(c)}</a></li>)}</ul>
+  </>)}
+</Base>

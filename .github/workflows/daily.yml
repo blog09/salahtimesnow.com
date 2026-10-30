@@ -1,0 +1,47 @@
+# Rebuild and deploy twice a day so the static pages show each city's new date.
+# (Browsers also recalculate for the current date, so a late or failed run never shows wrong times.)
+name: daily-build
+on:
+  schedule:
+    - cron: "15 0 * * *"   # just after midnight in the UK
+    - cron: "15 8 * * *"   # after midnight in every US and Canadian zone we cover
+  workflow_dispatch: {}
+concurrency:
+  group: daily-build
+  cancel-in-progress: false
+permissions:
+  contents: read
+  actions: write
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Build with quality gate
+        run: |
+          npm ci
+          npm run build:gated
+      - name: Deploy to Cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -o pipefail
+          if ! npx wrangler deploy 2>&1 | tee deploy.log; then
+            msg=$(grep -iE "error|code: *[0-9]+|authentication|permission|not found|forbidden|zone" deploy.log | grep -v "^\s*at " | head -6 | tr '\n' ' ')
+            echo "::error title=Cloudflare deploy failed::${msg:-see the step log}"
+            exit 1
+          fi
+      # GitHub pauses schedules after 60 days without repo activity: re-enabling each run prevents that.
+      - name: Keep the schedule alive
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/daily.yml/enable"

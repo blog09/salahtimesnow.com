@@ -1,0 +1,68 @@
+---
+// Today's prayers for one place, plus the month table. The HTML is correct as built; the browser then
+// recalculates for the visitor's actual date and their chosen method, so a late rebuild never shows wrong times.
+import { PRAYERS, METHODS, clock, hijriText, longDate, monthName } from '../lib/salah.mjs';
+import { dayRow, monthRows, today, type City } from '../lib/site';
+interface Props { city: City; method: string }
+const { city, method } = Astro.props;
+const t = today(city);
+const month = monthRows(city);
+---
+<div class="live" data-lat={city.lat} data-lon={city.lon} data-tz={city.tz} data-method={method}>
+  <p class="small"><strong data-date>{longDate(t.y, t.m, t.d)}</strong> · <span data-hijri>{hijriText(t.y, t.m, t.d)}</span> <span data-next></span></p>
+  <div class="prayers">
+    {PRAYERS.map(([k, n]) => <div data-p={k}><span>{n}</span><b>{t.cells[k]}</b></div>)}
+  </div>
+  <p class="small">Hanafi Asr: <strong data-hanafi>{clock(t.hanafiAsr, city.tz)}</strong></p>
+  <div class="tool">
+    <label>Calculation method
+      <select data-method-select>{Object.entries(METHODS).map(([k, v]) => <option value={k} selected={k === method}>{v}</option>)}</select>
+    </label>
+    <label>Asr
+      <select data-asr-select><option value="standard">Standard (Shafi'i, Maliki, Hanbali)</option><option value="hanafi">Hanafi</option></select>
+    </label>
+  </div>
+  <h2 data-month-title>{city.name} prayer timetable for {monthName(month.y, month.m)}</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Date</th><th>Hijri</th>{PRAYERS.map(([, n]) => <th class="n">{n}</th>)}</tr></thead>
+    <tbody data-month>{month.rows.map((r: any) => <tr class={r.d === month.today ? 'me' : ''}><td>{r.wd} {r.d}</td><td>{r.hijri}</td>{PRAYERS.map(([k]) => <td class="n">{r[k]}</td>)}</tr>)}</tbody>
+  </table></div>
+</div>
+<script>
+  import { times, clock, todayIn, longDate, hijriText, hijriParts, PRAYERS, daysIn, weekdayShort, monthName } from '../lib/salah.mjs';
+  const store = { get: (k: string) => { try { return localStorage.getItem(k); } catch { return null; } }, set: (k: string, v: string) => { try { localStorage.setItem(k, v); } catch {} } };
+  document.querySelectorAll<HTMLElement>('.live').forEach((root) => {
+    const { lat, lon, tz, method: dflt } = root.dataset as Record<string, string>;
+    const la = +lat, lo = +lon;
+    const mSel = root.querySelector<HTMLSelectElement>('[data-method-select]')!, aSel = root.querySelector<HTMLSelectElement>('[data-asr-select]')!;
+    const savedM = store.get('method'), savedA = store.get('asr');
+    if (savedM && [...mSel.options].some((o) => o.value === savedM)) mSel.value = savedM;
+    if (savedA) aSel.value = savedA;
+    const set = (sel: string, v: string) => { const el = root.querySelector(sel); if (el) el.textContent = v; };
+    function render() {
+      const [y, m, d] = todayIn(tz), hanafi = aSel.value === 'hanafi', meth = mSel.value;
+      const p: any = times(la, lo, y, m, d, meth, hanafi);
+      set('[data-date]', longDate(y, m, d)); set('[data-hijri]', hijriText(y, m, d));
+      set('[data-hanafi]', clock(times(la, lo, y, m, d, meth, true).asr, tz));
+      const now = Date.now();
+      const upcoming = PRAYERS.filter(([k]) => k !== 'sunrise').find(([k]) => p[k].getTime() > now);
+      root.querySelectorAll<HTMLElement>('[data-p]').forEach((el) => {
+        const k = el.dataset.p!; el.querySelector('b')!.textContent = clock(p[k], tz);
+        el.classList.toggle('next', !!upcoming && upcoming[0] === k);
+      });
+      if (upcoming) { const min = Math.max(1, Math.round((p[upcoming[0]].getTime() - now) / 60000)); set('[data-next]', `· ${upcoming[1]} in ${min >= 60 ? Math.floor(min / 60) + ' hr ' : ''}${min % 60} min`); }
+      else set('[data-next]', '· Isha has started');
+      const name = root.querySelector('[data-month-title]');
+      if (name) name.textContent = name.textContent!.replace(/for .*/, 'for ' + monthName(y, m));
+      const body = root.querySelector('[data-month]');
+      if (body) body.innerHTML = Array.from({ length: daysIn(y, m) }, (_, i) => {
+        const q: any = times(la, lo, y, m, i + 1, meth, hanafi), h = hijriParts(y, m, i + 1);
+        return `<tr class="${i + 1 === d ? 'me' : ''}"><td>${weekdayShort(y, m, i + 1)} ${i + 1}</td><td>${h.day} ${h.month}</td>${PRAYERS.map(([k]) => `<td class="n">${clock(q[k], tz)}</td>`).join('')}</tr>`;
+      }).join('');
+    }
+    mSel.addEventListener('change', () => { store.set('method', mSel.value); render(); });
+    aSel.addEventListener('change', () => { store.set('asr', aSel.value); render(); });
+    render();
+    setInterval(render, 60000);
+  });
+</script>

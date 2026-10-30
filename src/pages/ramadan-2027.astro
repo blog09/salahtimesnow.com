@@ -1,0 +1,48 @@
+---
+import Base from '../layouts/Base.astro';
+import { cities, cityUrl, shortLabel, ramadanFacts, RAMADAN_2027 } from '../lib/site';
+import { longDate, defaultMethod, hijriParts } from '../lib/salah.mjs';
+const { first, last } = RAMADAN_2027;
+const rows = cities.slice(0, 30).map((c) => ({ c, r: ramadanFacts(c) })).sort((a, b) => shortLabel(a.c).localeCompare(shortLabel(b.c)));
+const opts = [...cities].sort((a, b) => shortLabel(a).localeCompare(shortLabel(b)));
+const length = Math.round((Date.UTC(last![0], last![1] - 1, last![2]) - Date.UTC(first![0], first![1] - 1, first![2])) / 864e5) + 1;
+const eid = new Date(Date.UTC(last![0], last![1] - 1, last![2] + 1));
+---
+<Base title="Ramadan 2027: Expected Dates, Sehri and Iftar Times" description={`Ramadan 2027 is expected to begin around ${longDate(first![0], first![1], first![2])}. See sehri and iftar times by city and a full daily calendar for your city.`} crumbs={[['Ramadan 2027']]}>
+  <h1>Ramadan 2027 dates and calendar</h1>
+  <p class="hl">Ramadan 1448 AH is expected to begin on <strong>{longDate(first![0], first![1], first![2])}</strong> and last {length} days by the Umm al-Qura calendar, with Eid al-Fitr around <strong>{longDate(eid.getUTCFullYear(), eid.getUTCMonth() + 1, eid.getUTCDate())}</strong>.</p>
+  <p>These are calculated dates. Many communities begin after sighting the moon, so your start date can differ by a day. Confirm with your local mosque before the month begins.</p>
+
+  <h2>Daily calendar for your city</h2>
+  <div class="tool" id="rc" data-first={first!.join('-')} data-days={length}>
+    <label>City
+      <select id="rc-city">{opts.map((c) => <option value={c.slug} data-lat={c.lat} data-lon={c.lon} data-tz={c.tz} data-m={defaultMethod(c.country)} selected={c.slug === cities[0].slug}>{shortLabel(c)} ({c.country})</option>)}</select>
+    </label>
+    <div class="tbl"><table>
+      <thead><tr><th class="n">Day</th><th>Date</th><th class="n">Sehri ends (Fajr)</th><th class="n">Iftar (Maghrib)</th><th class="n">Fast</th></tr></thead>
+      <tbody id="rc-body"></tbody>
+    </table></div>
+  </div>
+
+  <h2>First and last fast by city</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>City</th><th class="n">Sehri, day 1</th><th class="n">Iftar, day 1</th><th class="n">Sehri, last day</th><th class="n">Iftar, last day</th><th class="n">Last fast</th></tr></thead>
+    <tbody>{rows.map(({ c, r }) => <tr><td><a href={cityUrl(c)}>{shortLabel(c)}</a></td><td class="n">{r.sehriFirst}</td><td class="n">{r.iftarFirst}</td><td class="n">{r.sehriLast}</td><td class="n">{r.iftarLast}</td><td class="n">{r.fastLast}</td></tr>)}</tbody>
+  </table></div>
+  <p class="small">Days lengthen through the month, because Ramadan 2027 falls in the northern late winter. Daylight saving begins on March 14 in the US and Canada, after this Ramadan ends; UK clocks change on March 28.</p>
+</Base>
+<script>
+  import { times, clock, span, shortDate } from '../lib/salah.mjs';
+  const root = document.getElementById('rc')!, sel = document.getElementById('rc-city') as HTMLSelectElement, body = document.getElementById('rc-body')!;
+  const [fy, fm, fd] = root.dataset.first!.split('-').map(Number), days = +root.dataset.days!;
+  function draw() {
+    const o = sel.selectedOptions[0].dataset as Record<string, string>;
+    body.innerHTML = Array.from({ length: days }, (_, i) => {
+      const x = new Date(Date.UTC(fy, fm - 1, fd + i)), y = x.getUTCFullYear(), m = x.getUTCMonth() + 1, d = x.getUTCDate();
+      const p = times(+o.lat, +o.lon, y, m, d, o.m);
+      return `<tr><td class="n">${i + 1}</td><td>${shortDate(y, m, d)}</td><td class="n">${clock(p.fajr, o.tz)}</td><td class="n">${clock(p.maghrib, o.tz)}</td><td class="n">${span(p.fajr, p.maghrib)}</td></tr>`;
+    }).join('');
+  }
+  sel.addEventListener('change', draw);
+  draw();
+</script>

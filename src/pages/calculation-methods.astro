@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import { METHODS, methodAngles, times, clock, todayIn } from '../lib/salah.mjs';
+import { bySlug, shortLabel, cityUrl } from '../lib/site';
+const samples = ['new-york', 'london', 'toronto'].map(bySlug);
+const USED: Record<string, string> = {
+  NorthAmerica: 'Often used in the US and Canada. Our default there.',
+  MoonsightingCommittee: 'Adjusts Fajr and Isha by season, which suits higher latitudes. Our default in the UK.',
+  MuslimWorldLeague: 'Widely used in Europe and the Far East.',
+  Karachi: 'Common in Pakistan, Bangladesh and India.',
+  Egyptian: 'Used in Egypt and parts of Africa and the Middle East.',
+  UmmAlQura: 'Used in Saudi Arabia. Isha is a fixed gap after Maghrib.',
+};
+const rows = Object.keys(METHODS).map((k) => ({ k, a: methodAngles(k) }));
+---
+<Base title="Prayer Time Calculation Methods Compared: ISNA, MWL, More" description="Why prayer timetables disagree: ISNA, Muslim World League, Moonsighting Committee, Karachi, Egyptian and Umm al-Qura compared, with today's Fajr and Isha under each." crumbs={[['Calculation methods']]}>
+  <h1>Prayer time calculation methods</h1>
+  <p>Two timetables for one city can differ by half an hour. Dhuhr and Maghrib follow clear solar events, so they barely change. Fajr and Isha depend on how far below the horizon the sun must be, and authorities choose different angles.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Method</th><th class="n">Fajr angle</th><th class="n">Isha</th><th>Where it is used</th></tr></thead>
+    <tbody>{rows.map(({ k, a }) => <tr><td>{(METHODS as any)[k]}</td><td class="n">{a.fajr}°</td><td class="n">{a.ishaInterval ? `${a.ishaInterval} min after Maghrib` : `${a.isha}°`}</td><td style="white-space:normal">{USED[k]}</td></tr>)}</tbody>
+  </table></div>
+  {samples.map((c) => { const [y, m, d] = todayIn(c.tz); return <>
+    <h2>Today in <a href={cityUrl(c)}>{shortLabel(c)}</a> under each method</h2>
+    <div class="tbl"><table>
+      <thead><tr><th>Method</th><th class="n">Fajr</th><th class="n">Isha</th></tr></thead>
+      <tbody>{rows.map(({ k }) => { const p = times(c.lat, c.lon, y, m, d, k); return <tr><td>{(METHODS as any)[k]}</td><td class="n">{clock(p.fajr, c.tz)}</td><td class="n">{clock(p.isha, c.tz)}</td></tr>; })}</tbody>
+    </table></div>
+  </>; })}
+  <h2>Which method should you use?</h2>
+  <p>Follow your local mosque if you can, because praying and fasting together matters more than a few minutes on a timetable. If you have no local reference, choose the method your community uses. Every city page lets you switch method, and your browser remembers the choice.</p>
+</Base>

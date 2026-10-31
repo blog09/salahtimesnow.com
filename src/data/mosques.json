@@ -48,5 +48,1626 @@
 "area": "",
 "web": ""
 }
+],
+"chicago": [
+{
+"name": "Downtown Islamic Center",
+"km": 0.2,
+"area": "Chicago",
+"web": "https://www.dtislamiccenter.org/"
+},
+{
+"name": "Masjid Al Ihsan",
+"km": 6.1,
+"area": "Chicago",
+"web": ""
+},
+{
+"name": "Al Sadiq Mosque",
+"km": 7.2,
+"area": "Chicago",
+"web": "https://www.ahmadiyya.us/chapters/chicagoeast/42-"
+},
+{
+"name": "Masjid-e-Abubakr",
+"km": 7.6,
+"area": "Chicago",
+"web": "http://www.northsidemosque.org/abu-bakr-masjid-roscoe/"
+},
+{
+"name": "Masjid Al-Faatir",
+"km": 8.1,
+"area": "Chicago",
+"web": ""
+},
+{
+"name": "The Nigerian Islamic Center of Chicago",
+"km": 8.5,
+"area": "Chicago",
+"web": "https://ncnmo.org/about/chapters/"
+},
+{
+"name": "Chicago Central Mosque & Islamic Center",
+"km": 11.3,
+"area": "Chicago",
+"web": "https://uama.us/en/chicago-central-mosque-islamic-center/"
+},
+{
+"name": "Muslim Community Center",
+"km": 12.3,
+"area": "Chicago",
+"web": "https://mccchicago.org/"
+}
+],
+"houston": [
+{
+"name": "Islamic Da'wah Center",
+"km": 0.9,
+"area": "Houston",
+"web": ""
+},
+{
+"name": "Ismaili Center Houston",
+"km": 2.1,
+"area": "Houston",
+"web": ""
+},
+{
+"name": "Islamic Society of Greater Houston",
+"km": 5.9,
+"area": "Houston",
+"web": "https://isgh.org/"
+},
+{
+"name": "Masjid",
+"km": 9.6,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Khulafa’a Rashideen",
+"km": 13.1,
+"area": "Houston",
+"web": "https://masjidkr.org/"
+},
+{
+"name": "Masjid Salah Ad-Deen",
+"km": 13.3,
+"area": "Houston",
+"web": "https://www.aicp.org/"
+},
+{
+"name": "Madrasah Islamiah Masjid Noor",
+"km": 14.3,
+"area": "Houston",
+"web": "https://mislamiah.com"
+},
+{
+"name": "Kalkan Masjid Houston",
+"km": 14.5,
+"area": "Houston",
+"web": ""
+}
+],
+"minneapolis": [
+{
+"name": "Islamic Community of Bosniacs in Minnesota",
+"km": 2.4,
+"area": "",
+"web": ""
+},
+{
+"name": "Tawfiq Islamic Center",
+"km": 2.8,
+"area": "Minneapolis",
+"web": ""
+},
+{
+"name": "Islamic Community Center of Minnesota",
+"km": 2.8,
+"area": "Minneapolis",
+"web": ""
+},
+{
+"name": "Masjid al Furqaan",
+"km": 2.8,
+"area": "Minneapolis",
+"web": ""
+},
+{
+"name": "Mercy Center Masjid Alrahma",
+"km": 2.8,
+"area": "Minneapolis",
+"web": ""
+},
+{
+"name": "Masjid An-Nur",
+"km": 2.8,
+"area": "Minneapolis",
+"web": "https://masjidannur.org/"
+},
+{
+"name": "Dar Al-Farooq",
+"km": 3.0,
+"area": "Minneapolis",
+"web": ""
+},
+{
+"name": "Abubakar As-Saddique Islamic Center",
+"km": 3.1,
+"area": "",
+"web": ""
+}
+],
+"philadelphia": [
+{
+"name": "United Muslim Movement",
+"km": 1.3,
+"area": "Philadelphia",
+"web": "https://www.ummonline.org/"
+},
+{
+"name": "Albanian American Muslim Society",
+"km": 3.0,
+"area": "Philadelphia",
+"web": ""
+},
+{
+"name": "Al-Aqsa Islamic Society",
+"km": 3.1,
+"area": "Philadelphia",
+"web": "https://alaqsaislamicsociety.com/"
+},
+{
+"name": "Masjid Al-Jamia",
+"km": 3.7,
+"area": "Philadelphia",
+"web": ""
+},
+{
+"name": "Makkah Masjid",
+"km": 3.9,
+"area": "Philadelphia",
+"web": ""
+},
+{
+"name": "A.I.C. Islamic Center",
+"km": 3.9,
+"area": "Philadelphia",
+"web": "https://www.aicp.org/"
+},
+{
+"name": "Masjid Salaam",
+"km": 4.3,
+"area": "",
+"web": ""
+},
+{
+"name": "Muhammad Mosque #12 Nation of Islam",
+"km": 4.4,
+"area": "Philadelphia",
+"web": ""
+}
+],
+"boston": [
+{
+"name": "Islamic Society of Boston",
+"km": 3.6,
+"area": "Cambridge",
+"web": "https://isbcc.org/getting-here/#x-section-2"
+},
+{
+"name": "Islamic Society of Boston Cultural Center",
+"km": 4.3,
+"area": "Roxbury",
+"web": ""
+},
+{
+"name": "Arabic Jumaa Mosque",
+"km": 6.3,
+"area": "",
+"web": "https://arabic-jumaa-mosque-boston.yolasite.com/"
+},
+{
+"name": "Allston Brighton Islamic Center",
+"km": 6.5,
+"area": "",
+"web": "http://zamongajumath.org/"
+},
+{
+"name": "Islamic Center of Rindge Ave",
+"km": 7.6,
+"area": "Cambridge",
+"web": ""
+},
+{
+"name": "Yusuf Mosque",
+"km": 8.1,
+"area": "Brighton",
+"web": ""
+},
+{
+"name": "Waltham Islamic Society",
+"km": 14.6,
+"area": "Waltham",
+"web": ""
+},
+{
+"name": "North Shore Islamic Center",
+"km": 16.3,
+"area": "",
+"web": ""
+}
+],
+"los-angeles": [
+{
+"name": "Islamic Center of Southern California",
+"km": 4.7,
+"area": "Los Angeles",
+"web": ""
+},
+{
+"name": "Masjid Bilal",
+"km": 4.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Omar ibn Al-Khattab",
+"km": 5.8,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Al-Falah",
+"km": 6.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Bab-Ul-Ilm Islamic Center",
+"km": 9.5,
+"area": "Maywood",
+"web": "http://www.babulilm.org/"
+},
+{
+"name": "Islamic Center of Glendale",
+"km": 9.6,
+"area": "Glendale",
+"web": ""
+},
+{
+"name": "Bell Islamic Center",
+"km": 10.8,
+"area": "Bell",
+"web": "https://www.facebook.com/p/Bell-Islamic-Center-100066382398353/"
+},
+{
+"name": "Islamic Society of Downey",
+"km": 14.5,
+"area": "Downey",
+"web": ""
+}
+],
+"brooklyn": [
+{
+"name": "Masjid Ul Kawthar",
+"km": 0.7,
+"area": "Brooklyn",
+"web": ""
+},
+{
+"name": "Masjid At-Taqea",
+"km": 0.8,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Zawiyat Sof'watful Islam",
+"km": 1.2,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid El-ijsan",
+"km": 1.2,
+"area": "",
+"web": ""
+},
+{
+"name": "Baitush Sharf Jame Masjid & Islamic Center",
+"km": 1.6,
+"area": "",
+"web": ""
+},
+{
+"name": "Nigerian American Muslim Integrated Community",
+"km": 1.6,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid-Al-Ihsaan",
+"km": 1.8,
+"area": "",
+"web": ""
+},
+{
+"name": "Ibaadu'rrahman Central Mosque",
+"km": 2.8,
+"area": "",
+"web": "https://ibaadurahman.com"
+}
+],
+"dallas": [
+{
+"name": "Dallas Masjid of al-Islam",
+"km": 2.0,
+"area": "",
+"web": ""
+},
+{
+"name": "Allahs House of Islam",
+"km": 8.4,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Association of North Texas",
+"km": 19.1,
+"area": "Richardson",
+"web": "http://www.iant.com/"
+}
+],
+"columbus": [
+{
+"name": "Islamic Center",
+"km": 3.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid As-Sahaba",
+"km": 6.0,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Omar Ibn El-Khattab",
+"km": 7.5,
+"area": "Columbus",
+"web": "https://www.masjidomarohio.org/"
+},
+{
+"name": "Masjid Abu Bakr",
+"km": 10.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Namarah Pakistani Community Center",
+"km": 11.7,
+"area": "",
+"web": ""
+}
+],
+"detroit": [
+{
+"name": "Masjid Al-Fatiha",
+"km": 1.8,
+"area": "Detroit",
+"web": ""
+},
+{
+"name": "Noor-ul-Islam",
+"km": 2.7,
+"area": "Windsor",
+"web": ""
+},
+{
+"name": "Windsor Mosque",
+"km": 6.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Baitul Islam Mosque",
+"km": 6.2,
+"area": "Detroit",
+"web": ""
+},
+{
+"name": "Baitul Ehsaan Mosque",
+"km": 6.3,
+"area": "Windsor",
+"web": "https://www.ahmadiyya.ca/mosques/baitul-ehsaan"
+},
+{
+"name": "Windsor Islamic Association Centre",
+"km": 6.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Mu'ath Bin Jabal",
+"km": 6.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Ideal Islamic Center",
+"km": 7.0,
+"area": "",
+"web": ""
+}
+],
+"buffalo": [
+{
+"name": "Masjid Zakariya",
+"km": 4.0,
+"area": "",
+"web": ""
+},
+{
+"name": "Al-Khulafa Mosque",
+"km": 4.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Jami Masjid Buffalo",
+"km": 6.4,
+"area": "Buffalo",
+"web": ""
+},
+{
+"name": "Masjid At-Taqwa",
+"km": 6.8,
+"area": "Buffalo",
+"web": "https://www.isnf.org/"
+},
+{
+"name": "Baitul Mukarram Jame Masjid",
+"km": 8.3,
+"area": "Buffalo",
+"web": ""
+},
+{
+"name": "ISNF Masjid An-Noor",
+"km": 18.5,
+"area": "",
+"web": ""
+}
+],
+"orlando": [
+{
+"name": "Masjid Al-Haqq",
+"km": 0.9,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Al-Quddus",
+"km": 1.0,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Al-Rahim",
+"km": 6.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Majid al-Ihsaan",
+"km": 9.3,
+"area": "Orlando",
+"web": ""
+},
+{
+"name": "IEC of Florida",
+"km": 11.6,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Al-Malik",
+"km": 15.6,
+"area": "Orlando",
+"web": ""
+},
+{
+"name": "Islamic Center of Orlando - Jama Masjid",
+"km": 19.7,
+"area": "Orlando",
+"web": ""
+}
+],
+"denver": [
+{
+"name": "Masjid Shuhada",
+"km": 2.7,
+"area": "Denver",
+"web": ""
+},
+{
+"name": "Northeast Denver Islamic Center",
+"km": 5.2,
+"area": "Denver",
+"web": "https://northeastdenverislamiccenter.com/"
+},
+{
+"name": "Islamic Center",
+"km": 11.8,
+"area": "Denver",
+"web": "https://coloradomuslimsociety.org/"
+},
+{
+"name": "Islamic Center of Golden",
+"km": 19.1,
+"area": "",
+"web": ""
+}
+],
+"sacramento": [
+{
+"name": "Islamic Center of Sacramento",
+"km": 1.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid As-Sabur",
+"km": 6.3,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Annur",
+"km": 8.2,
+"area": "",
+"web": "http://masjidannur.com/"
+},
+{
+"name": "SALAM",
+"km": 14.4,
+"area": "",
+"web": "https://www.salamcenter.org/"
+}
+],
+"tampa": [
+{
+"name": "Masjid Omar Almokhtar",
+"km": 1.6,
+"area": "",
+"web": ""
+},
+{
+"name": "IEC Masjid of Tampa",
+"km": 6.7,
+"area": "Tampa",
+"web": ""
+},
+{
+"name": "Islamic Society of Tampa Bay Area",
+"km": 10.6,
+"area": "Tampa",
+"web": ""
+},
+{
+"name": "Islamic Center of Brandon",
+"km": 15.6,
+"area": "Brandon",
+"web": ""
+},
+{
+"name": "Masjid Al Khaliq",
+"km": 19.1,
+"area": "Thonotosassa",
+"web": ""
+}
+],
+"austin": [
+{
+"name": "Nueces Mosque",
+"km": 1.8,
+"area": "Austin",
+"web": "https://nuecesmosque.com/"
+},
+{
+"name": "Islamic Center of Greater Austin",
+"km": 6.5,
+"area": "Austin",
+"web": "https://austinmosque.org/"
+},
+{
+"name": "Masjid Ibrahim",
+"km": 14.5,
+"area": "Austin",
+"web": "https://www.masjidibrahim.org/"
+},
+{
+"name": "North Austin Muslim Community Center",
+"km": 14.8,
+"area": "Austin",
+"web": "https://www.namcc.org/"
+},
+{
+"name": "Al-Noor Mosque (MCC)",
+"km": 19.2,
+"area": "Manor",
+"web": "https://alnoormcc.org/"
+}
+],
+"nashville": [
+{
+"name": "Al-Mahdi Islamic Center",
+"km": 3.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Center of Nashville",
+"km": 4.3,
+"area": "",
+"web": ""
+},
+{
+"name": "Al-Farooq Islamic Center",
+"km": 7.6,
+"area": "Nashville",
+"web": "https://www.al-farooqcenter.org"
+}
+],
+"san-francisco": [
+{
+"name": "Islamic Society of San Francisco",
+"km": 1.0,
+"area": "",
+"web": "https://islamsf.org/"
+},
+{
+"name": "Alsabeel Masjid Noor Al Islam",
+"km": 1.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Al Tawheed Mosque",
+"km": 1.4,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Center of San Francisco",
+"km": 4.5,
+"area": "San Francisco",
+"web": "https://www.icofsf.org/"
+},
+{
+"name": "As-Salam Mosque",
+"km": 12.2,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Center of Alameda",
+"km": 13.1,
+"area": "Alameda",
+"web": "https://icabayarea.org/"
+},
+{
+"name": "Islamic Cultural Center of Northern California",
+"km": 14.0,
+"area": "",
+"web": "https://iccnc.org/"
+},
+{
+"name": "Oakland Islamic Center",
+"km": 14.2,
+"area": "Oakland",
+"web": "https://oaklandislamiccenter.org/"
+}
+],
+"cleveland": [
+{
+"name": "Masjid Bilal",
+"km": 4.8,
+"area": "Cleveland",
+"web": "http://masjidbilalofcleveland.org/"
+},
+{
+"name": "Masjid Warith Deen",
+"km": 5.2,
+"area": "cleveland",
+"web": ""
+},
+{
+"name": "First Cleveland Mosque",
+"km": 9.6,
+"area": "Cleveland",
+"web": "https://firstclevelandmasjid.org"
+},
+{
+"name": "Islamic Center of Cleveland",
+"km": 13.3,
+"area": "Parma",
+"web": "https://www.iccleveland.org/"
+},
+{
+"name": "Baitul Ahad",
+"km": 17.0,
+"area": "Bedford",
+"web": ""
+}
+],
+"indianapolis": [
+{
+"name": "Masjid Al-Fajr",
+"km": 5.7,
+"area": "Indianapolis",
+"web": ""
+},
+{
+"name": "Nur-Allah Islamic Center",
+"km": 8.5,
+"area": "Indianapolis",
+"web": ""
+},
+{
+"name": "Masjid Noor",
+"km": 12.4,
+"area": "Indianapolis",
+"web": ""
+}
+],
+"jersey-city": [
+{
+"name": "Muslim Federation of NJ",
+"km": 1.5,
+"area": "Jersey City",
+"web": "https://www.mfnj.net"
+},
+{
+"name": "Masjid Al-Salam Islamic Education and Information Center",
+"km": 2.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Al-Tawheed Islamic Center",
+"km": 3.0,
+"area": "Jersey City",
+"web": ""
+},
+{
+"name": "Masjid Manhattan",
+"km": 3.4,
+"area": "New York",
+"web": "https://masjidmanhattan.com/"
+},
+{
+"name": "Islamic Center at NYU",
+"km": 4.0,
+"area": "",
+"web": "https://www.icnyu.org/"
+},
+{
+"name": "Assafa Islamic Center",
+"km": 4.4,
+"area": "",
+"web": "https://assafaislamiccenter.org/"
+},
+{
+"name": "Madina Masjid",
+"km": 5.2,
+"area": "New York",
+"web": "https://nycmadinamasjid.org/"
+},
+{
+"name": "Masjid Ar-Rahman",
+"km": 5.6,
+"area": "",
+"web": "https://masjidarrahmannyc.org/"
+}
+],
+"las-vegas": [
+{
+"name": "Islamic Center",
+"km": 7.6,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Information Center",
+"km": 9.0,
+"area": "Las Vegas",
+"web": ""
+},
+{
+"name": "Baitul Tauheed Mosque",
+"km": 10.3,
+"area": "Las Vegas",
+"web": ""
+}
+],
+"phoenix": [
+{
+"name": "Muslim Community Mosque",
+"km": 6.0,
+"area": "Phoenix",
+"web": ""
+},
+{
+"name": "Ismaili Cultural Center",
+"km": 7.4,
+"area": "",
+"web": ""
+},
+{
+"name": "Ibadurahman Mosque",
+"km": 9.6,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Community Center of Phoenix Secondary",
+"km": 11.4,
+"area": "Phoenix",
+"web": "https://iccpaz.com"
+},
+{
+"name": "Islamic Community Center of Phoenix",
+"km": 11.5,
+"area": "Phoenix",
+"web": "https://iccpaz.com/"
+},
+{
+"name": "Islamic Community Center",
+"km": 13.0,
+"area": "Tempe",
+"web": ""
+},
+{
+"name": "Islamic Center of Arizona",
+"km": 13.4,
+"area": "Phoenix",
+"web": ""
+}
+],
+"charlotte": [
+{
+"name": "Masjid Ash-Shaheed",
+"km": 6.1,
+"area": "Charlotte",
+"web": ""
+},
+{
+"name": "Islamic Center of Charlotte",
+"km": 7.0,
+"area": "Charlotte",
+"web": "https://iccharlotte.org/"
+},
+{
+"name": "Al Zahra Islamic Center of Charlotte",
+"km": 7.5,
+"area": "Charlotte",
+"web": "https://azicc.org/"
+},
+{
+"name": "Islamic Society of Greater Charlotte",
+"km": 10.0,
+"area": "",
+"web": ""
+}
+],
+"cincinnati": [
+{
+"name": "Mohammed Temple #3",
+"km": 5.1,
+"area": "Cincinnati",
+"web": ""
+},
+{
+"name": "Islamic Association of Cincinnati",
+"km": 5.2,
+"area": "Cincinnati",
+"web": ""
+},
+{
+"name": "ICNK Community Center",
+"km": 16.5,
+"area": "",
+"web": ""
+}
+],
+"louisville": [
+{
+"name": "Al-Nur Mosque",
+"km": 5.0,
+"area": "Louisville",
+"web": "https://www.alnurmosque.org/"
+},
+{
+"name": "Louisville Islamic Center of Compassion",
+"km": 8.2,
+"area": "",
+"web": ""
+},
+{
+"name": "Alzahrah Islamic Center",
+"km": 9.2,
+"area": "",
+"web": ""
+},
+{
+"name": "The Muslim Communnity Center of Louisville",
+"km": 14.1,
+"area": "",
+"web": ""
+}
+],
+"miami": [],
+"milwaukee": [
+{
+"name": "The Islamic Society of Milwaukee University Center",
+"km": 4.4,
+"area": "Milwaukee",
+"web": "http://www.ismonline.org/index.php/about-us/new-mosque-by-uwm"
+},
+{
+"name": "Islamic Da'wa Center",
+"km": 8.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Society of Milwaukee",
+"km": 9.1,
+"area": "Milwaukee",
+"web": "https://www.ismonline.org/"
+},
+{
+"name": "Ismaili Community Center and Jamatkhana",
+"km": 11.1,
+"area": "Milwaukee",
+"web": ""
+},
+{
+"name": "Baitul Qadir Mosque",
+"km": 12.4,
+"area": "Greenfield",
+"web": ""
+},
+{
+"name": "Masjid al-Huda South Milwaukee",
+"km": 14.3,
+"area": "South Milwaukee",
+"web": ""
+},
+{
+"name": "Dar-ul-Hikmah",
+"km": 15.2,
+"area": "Greenfield",
+"web": ""
+},
+{
+"name": "Masjid Al-Qur'an",
+"km": 19.7,
+"area": "Milwaukee",
+"web": ""
+}
+],
+"st-louis": [
+{
+"name": "Quoba Masjid",
+"km": 2.3,
+"area": "St Louis",
+"web": ""
+},
+{
+"name": "Al-Muminoon Masjid",
+"km": 3.3,
+"area": "Saint Louis",
+"web": ""
+},
+{
+"name": "Masjid Bilal",
+"km": 3.8,
+"area": "Saint Louis",
+"web": ""
+},
+{
+"name": "Grand Islamic Center",
+"km": 5.2,
+"area": "St. Louis",
+"web": ""
+},
+{
+"name": "Hazrat Abu Bakr Masjid",
+"km": 7.3,
+"area": "St. Louis",
+"web": ""
+},
+{
+"name": "Islamic Community Center",
+"km": 7.8,
+"area": "St. Louis",
+"web": ""
+},
+{
+"name": "Umar Masjid",
+"km": 8.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Baitul Hafeez Mosque",
+"km": 8.5,
+"area": "St. Louis",
+"web": ""
+}
+],
+"katy": [
+{
+"name": "Masjid Al-Ahad",
+"km": 12.7,
+"area": "Katy",
+"web": "https://masjidahad.org/"
+},
+{
+"name": "Masjid E Mohammedi",
+"km": 16.3,
+"area": "Houston",
+"web": "https://www.houstonjamaat.com/"
+},
+{
+"name": "Masjid Al-Mustafa",
+"km": 17.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Ismaili Jamatkhana and Center - Harvest Green",
+"km": 18.4,
+"area": "Richmond",
+"web": ""
+},
+{
+"name": "HART Islamic Community Center",
+"km": 18.8,
+"area": "Richmond",
+"web": "https://hart.community/"
+},
+{
+"name": "Dar-Un-Noor",
+"km": 19.8,
+"area": "",
+"web": ""
+}
+],
+"pittsburgh": [
+{
+"name": "al-Masjid al-Awwal",
+"km": 1.3,
+"area": "Pittsburgh",
+"web": "https://firstmuslimmosque.com/"
+},
+{
+"name": "Islamic Center of Pittsburgh",
+"km": 3.5,
+"area": "Pittsburgh",
+"web": "https://www.icp-pgh.org/"
+},
+{
+"name": "Attawheed Islamic Center",
+"km": 8.2,
+"area": "Carnegie",
+"web": "https://www.attawheed.org/"
+},
+{
+"name": "Muslim Community Center of Greater Pittsburgh",
+"km": 17.5,
+"area": "Monroeville",
+"web": "https://mccgp.org/"
+}
+],
+"portland": [
+{
+"name": "Masjid Al-Huda",
+"km": 7.0,
+"area": "Portland",
+"web": ""
+},
+{
+"name": "The Porltand Rizwan Mosque",
+"km": 7.4,
+"area": "Portland",
+"web": "https://portland.ahmadiyya.us/"
+},
+{
+"name": "Islamic Center of Portland",
+"km": 7.9,
+"area": "Portland",
+"web": "https://www.assaber.com/"
+},
+{
+"name": "Imam Mahdi Center",
+"km": 11.0,
+"area": "Beaverton",
+"web": ""
+},
+{
+"name": "Masjid Ibrahim Bethany Musalla",
+"km": 12.8,
+"area": "Portland",
+"web": "https://masjid-ibrahim.com/"
+},
+{
+"name": "Bilal Masjid",
+"km": 13.1,
+"area": "Beaverton",
+"web": "https://www.bilalmasjid.com/"
+},
+{
+"name": "Masjid Salama",
+"km": 15.0,
+"area": "",
+"web": "https://masjidsalama.com/"
+}
+],
+"queens": [
+{
+"name": "Baituz-Zafar",
+"km": 1.7,
+"area": "Hollis",
+"web": ""
+},
+{
+"name": "Jamaica Muslim Center",
+"km": 1.7,
+"area": "Jamaica",
+"web": "https://jamaicamuslimcenter.org"
+},
+{
+"name": "Fultoli Islamic Center",
+"km": 1.8,
+"area": "Jamaica",
+"web": ""
+},
+{
+"name": "Masjid Mission Center",
+"km": 2.0,
+"area": "Jamaica",
+"web": ""
+},
+{
+"name": "Arafa Islamic Center",
+"km": 2.0,
+"area": "Jamaica",
+"web": "https://aicnyc.org"
+},
+{
+"name": "Icna Al-Markaz Masjid",
+"km": 2.2,
+"area": "Jamaica",
+"web": ""
+},
+{
+"name": "Al-Muneer Community Center",
+"km": 2.6,
+"area": "Hollis",
+"web": ""
+},
+{
+"name": "Darus Salaam Masjid",
+"km": 2.7,
+"area": "Jamaica",
+"web": ""
+}
+],
+"raleigh": [
+{
+"name": "As Salaam Islamic Center",
+"km": 2.8,
+"area": "Raleigh",
+"web": "https://assalaamic.org/"
+},
+{
+"name": "Islamic Association of Raleigh",
+"km": 4.9,
+"area": "Raleigh",
+"web": "https://raleighmasjid.org"
+},
+{
+"name": "Masjid an-Noor al-Muhammadi",
+"km": 6.5,
+"area": "Raleigh",
+"web": ""
+},
+{
+"name": "North Raleigh Masjid",
+"km": 10.9,
+"area": "",
+"web": ""
+},
+{
+"name": "Şefkat Mosque",
+"km": 11.4,
+"area": "Cary",
+"web": "http://www.iitsnc.org/prayertimes.php"
+},
+{
+"name": "Apex Mosque",
+"km": 19.1,
+"area": "Apex",
+"web": ""
+}
+],
+"kansas-city": [
+{
+"name": "Al-Taqwa Islamic Center",
+"km": 1.3,
+"area": "Kansas City",
+"web": "https://www.altaqwacenter.org/"
+},
+{
+"name": "Masjidu Nuur Islamic Center",
+"km": 2.5,
+"area": "Kansas City",
+"web": "https://www.masjidunuurkc.org/"
+},
+{
+"name": "Masjid Anas Bin Malik",
+"km": 3.5,
+"area": "Kansas City",
+"web": "https://masjidanasbinmalik.org/"
+},
+{
+"name": "Al-Kahf Community Center",
+"km": 4.0,
+"area": "Kansas City",
+"web": ""
+},
+{
+"name": "Al-Inshirah Islamic Center",
+"km": 4.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Al-Huda Center",
+"km": 4.8,
+"area": "Kansas City",
+"web": ""
+},
+{
+"name": "Kansas City Islamic Center",
+"km": 5.5,
+"area": "Kansas City",
+"web": "https://kcic.org/"
+},
+{
+"name": "Masjid Omar",
+"km": 7.3,
+"area": "Kansas City",
+"web": "https://www.kcmasjidomar.org/"
+}
+],
+"memphis": [
+{
+"name": "Nation of Islam Muhammad Mosque",
+"km": 2.3,
+"area": "Memphis",
+"web": "https://www.noi.org/"
+},
+{
+"name": "Masjid Al-Noor",
+"km": 10.1,
+"area": "Memphis",
+"web": ""
+},
+{
+"name": "Masjid At-Taqwa",
+"km": 11.5,
+"area": "Memphis",
+"web": ""
+},
+{
+"name": "Masjid Al-Salam - Muslim Society of Memphis",
+"km": 13.0,
+"area": "Memphis",
+"web": "https://www.memphismuslims.org/"
+},
+{
+"name": "Masjid Al-MuMinun",
+"km": 13.9,
+"area": "Memphis",
+"web": "https://www.masjidalmuminun.com/"
+},
+{
+"name": "Al Rasool Center",
+"km": 16.0,
+"area": "Memphis",
+"web": "https://www.alrasoolcenter.org/"
+}
+],
+"plano": [
+{
+"name": "East Plano Islamic Center",
+"km": 5.0,
+"area": "",
+"web": ""
+},
+{
+"name": "Ismaili Jamatkhana",
+"km": 5.2,
+"area": "Plano",
+"web": ""
+},
+{
+"name": "Bait-ul-Ikram Mosque",
+"km": 7.8,
+"area": "Allen",
+"web": "https://islamindallas.org/"
+},
+{
+"name": "Islamic Association of North Texas",
+"km": 9.4,
+"area": "Richardson",
+"web": "http://www.iant.com/"
+},
+{
+"name": "Islamic center of Wylie, Masjid",
+"km": 12.7,
+"area": "St Paul",
+"web": ""
+},
+{
+"name": "MOMIN of Texas",
+"km": 15.4,
+"area": "Dallas",
+"web": ""
+},
+{
+"name": "McKinney Islamic Center",
+"km": 17.0,
+"area": "",
+"web": ""
+},
+{
+"name": "City of Knowledge",
+"km": 17.5,
+"area": "Carrollton",
+"web": "https://cfkdfw.org/"
+}
+],
+"richmond": [
+{
+"name": "Masjid Umm Barakah",
+"km": 0.6,
+"area": "Richmond",
+"web": ""
+},
+{
+"name": "Islamic Center of Greater Richmond",
+"km": 9.4,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Center of Virginia (ICVA)",
+"km": 10.8,
+"area": "",
+"web": "http://icva.info"
+},
+{
+"name": "Islamic Center of Richmond(Masjid Yusuf)",
+"km": 14.2,
+"area": "Henrico",
+"web": ""
+}
+],
+"anaheim": [
+{
+"name": "Jafaria Islamic Society",
+"km": 2.1,
+"area": "Anaheim",
+"web": "https://www.jafaria.org/jafaria_site/"
+},
+{
+"name": "Masjid Al-Ansar",
+"km": 5.4,
+"area": "Anaheim",
+"web": "https://www.wcismasjid.com/"
+},
+{
+"name": "Al-Noor Foundation",
+"km": 12.8,
+"area": "Westminster",
+"web": ""
+},
+{
+"name": "La Mirada Masjid",
+"km": 13.8,
+"area": "La Mirada",
+"web": "http://www.masjidlamirada.org/"
+}
+],
+"san-jose": [
+{
+"name": "Masjid Al-Noor",
+"km": 6.3,
+"area": "",
+"web": ""
+},
+{
+"name": "South Bay Islamic Association",
+"km": 7.4,
+"area": "San Jose",
+"web": ""
+},
+{
+"name": "Muslim Community Association",
+"km": 7.8,
+"area": "Santa Clara",
+"web": "http://www.mcabayarea.org/"
+},
+{
+"name": "Evergreen Islamic Center",
+"km": 8.9,
+"area": "San Jose",
+"web": ""
+},
+{
+"name": "Santa Clara Valley Jamatkhana",
+"km": 9.2,
+"area": "Milpitas",
+"web": ""
+},
+{
+"name": "Masjid Darus Salaam",
+"km": 9.9,
+"area": "Milpitas",
+"web": "http://alhilaal.org/"
+},
+{
+"name": "Milpitas Musallah",
+"km": 10.6,
+"area": "Milpitas",
+"web": ""
+},
+{
+"name": "Saba",
+"km": 11.2,
+"area": "San Jose",
+"web": "https://saba-igc.org/"
+}
+],
+"sugar-land": [
+{
+"name": "Masjid Darul-Uloom Texas",
+"km": 3.2,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Istiqlal Houston",
+"km": 4.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Arafat",
+"km": 4.8,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid As Sabireen",
+"km": 5.4,
+"area": "Stafford",
+"web": ""
+},
+{
+"name": "ISGH Masjid At-Taqwa",
+"km": 5.4,
+"area": "Sugar Land",
+"web": "https://masjidattaqwa.com/"
+},
+{
+"name": "Maryam Islamic Center",
+"km": 5.6,
+"area": "Sugar Land",
+"web": ""
+},
+{
+"name": "Dar-Un-Noor",
+"km": 6.4,
+"area": "",
+"web": ""
+},
+{
+"name": "HART Islamic Community Center",
+"km": 8.1,
+"area": "Richmond",
+"web": "https://hart.community/"
+}
+],
+"albany": [
+{
+"name": "Muhammads Mosque",
+"km": 1.1,
+"area": "Albany",
+"web": ""
+},
+{
+"name": "Masjid As-Salam Mosque",
+"km": 1.8,
+"area": "",
+"web": ""
+},
+{
+"name": "Fique Mosque",
+"km": 9.8,
+"area": "Watervliet",
+"web": ""
+},
+{
+"name": "Al-Hidaya Center",
+"km": 10.0,
+"area": "Latham",
+"web": "https://www.al-hidaya.org/"
+},
+{
+"name": "Al-Hidaya Mosque",
+"km": 11.6,
+"area": "Troy",
+"web": ""
+}
+],
+"irving": [
+{
+"name": "Valley Ranch Islamic Center",
+"km": 11.5,
+"area": "Irving",
+"web": "https://vric.org"
+},
+{
+"name": "Islamic Center of Euless",
+"km": 13.4,
+"area": "Euless",
+"web": "https://icoeuless.com/"
+},
+{
+"name": "HEB Masjid",
+"km": 14.4,
+"area": "Euless",
+"web": ""
+},
+{
+"name": "Dar El Salaam Islamic Center",
+"km": 16.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Dallas Masjid of al-Islam",
+"km": 16.8,
+"area": "",
+"web": ""
+},
+{
+"name": "New Islamic Generation Foundation",
+"km": 17.8,
+"area": "",
+"web": ""
+},
+{
+"name": "Madinah Masjid of Carrollton",
+"km": 18.3,
+"area": "Carrollton",
+"web": "https://madinahmasjid.com/"
+}
 ]
 }

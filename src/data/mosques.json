@@ -1007,7 +1007,6 @@
 "web": ""
 }
 ],
-"miami": [],
 "milwaukee": [
 {
 "name": "The Islamic Society of Milwaukee University Center",
@@ -1668,6 +1667,1932 @@
 "km": 18.3,
 "area": "Carrollton",
 "web": "https://madinahmasjid.com/"
+}
+],
+"seattle": [
+{
+"name": "Islamic School of Seattle and Masjid Al Taqwa",
+"km": 2.4,
+"area": "Seattle",
+"web": "https://www.salatomatic.com/spc/Seattle/Masjid-Al-Taqwa/XG08K4By92"
+},
+{
+"name": "Islamic House",
+"km": 6.6,
+"area": "Seattle",
+"web": "https://msauw.org"
+},
+{
+"name": "Abu-Bakr Mosque",
+"km": 6.8,
+"area": "",
+"web": ""
+},
+{
+"name": "Idris Mosque",
+"km": 11.5,
+"area": "Seattle",
+"web": "https://www.idrismosque.com/"
+},
+{
+"name": "Ithna-asheri Muslim Association of the Northwest (IMAN)",
+"km": 12.1,
+"area": "Kirkland",
+"web": "https://www.iman-wa.org/"
+},
+{
+"name": "Islamic Center of North Seattle",
+"km": 13.0,
+"area": "Seattle",
+"web": "https://islamiccenterofnorthseattle.com/"
+},
+{
+"name": "Islamic Center of Eastside",
+"km": 13.8,
+"area": "",
+"web": ""
+},
+{
+"name": "Abu-Bakr",
+"km": 14.8,
+"area": "",
+"web": ""
+}
+],
+"atlanta": [
+{
+"name": "5 Points Islamic Center (Masjid Jami Islamic Center)",
+"km": 0.6,
+"area": "Atlanta",
+"web": ""
+},
+{
+"name": "Masjid Al-Mu'minun",
+"km": 2.8,
+"area": "Atlanta",
+"web": ""
+},
+{
+"name": "Masjid Al-Quran",
+"km": 4.1,
+"area": "Atlanta",
+"web": ""
+},
+{
+"name": "Al-Farooq Masjid of Atlanta",
+"km": 4.3,
+"area": "Atlanta",
+"web": "https://alfarooqmasjid.org/"
+},
+{
+"name": "Atlanta Masjid of Al Islam",
+"km": 7.2,
+"area": "",
+"web": "https://www.atlantamasjid.com/"
+},
+{
+"name": "Ismaili Jamat Khana",
+"km": 11.5,
+"area": "Scottdale",
+"web": ""
+}
+],
+"san-diego": [
+{
+"name": "Masjidul Taqwa San Diego",
+"km": 2.4,
+"area": "San Diego",
+"web": "http://www.masjidultaqwasandiego.org/"
+},
+{
+"name": "Muhammad Mosque Eight",
+"km": 3.2,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Al-Ansar",
+"km": 7.8,
+"area": "San Diego",
+"web": ""
+},
+{
+"name": "Masjid An-Nur (Islamic Center Of Mid City)",
+"km": 7.8,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Center of San Diego",
+"km": 11.7,
+"area": "San Diego",
+"web": "https://icsd.org"
+},
+{
+"name": "Al Rribat Al Aslami",
+"km": 12.6,
+"area": "",
+"web": ""
+}
+],
+"dearborn": [
+{
+"name": "Masjid Al-Salam",
+"km": 0.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Institute of Knowledge",
+"km": 1.6,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Council of America",
+"km": 2.2,
+"area": "Dearborn",
+"web": ""
+},
+{
+"name": "Masjid Al-Furqan",
+"km": 2.3,
+"area": "",
+"web": ""
+},
+{
+"name": "Imam Ali Islamic Center",
+"km": 3.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Center",
+"km": 4.3,
+"area": "Detroit",
+"web": ""
+},
+{
+"name": "Islamic Center of America",
+"km": 4.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Tawheed",
+"km": 4.5,
+"area": "Detroit",
+"web": ""
+}
+],
+"baltimore": [
+{
+"name": "Masjid Us Salaam",
+"km": 0.7,
+"area": "Baltimore",
+"web": ""
+},
+{
+"name": "Masjid Ul-Haqq",
+"km": 2.4,
+"area": "Baltimore",
+"web": ""
+},
+{
+"name": "Masjid Bait Allah",
+"km": 2.5,
+"area": "Baltimore",
+"web": "https://www.mbabaltimore.org/"
+},
+{
+"name": "Masjid as-Saffat",
+"km": 3.2,
+"area": "Baltimore",
+"web": "https://www.wcmas.org/"
+},
+{
+"name": "Masjid Ad Da'wah Ilat Tawheed",
+"km": 3.4,
+"area": "Baltimore",
+"web": ""
+},
+{
+"name": "Masjid Bilal",
+"km": 6.0,
+"area": "Baltimore",
+"web": ""
+},
+{
+"name": "Jamaat al-Muslimeen",
+"km": 6.1,
+"area": "Baltimore",
+"web": ""
+},
+{
+"name": "Hasbuna Allahu Islamic Center",
+"km": 6.4,
+"area": "Baltimore",
+"web": "https://haicbaltimore.org/"
+}
+],
+"irvine": [
+{
+"name": "Al-Noor Foundation",
+"km": 18.2,
+"area": "Westminster",
+"web": ""
+},
+{
+"name": "Masjid Al-Ansar",
+"km": 18.2,
+"area": "Anaheim",
+"web": "https://www.wcismasjid.com/"
+},
+{
+"name": "Jafaria Islamic Society",
+"km": 19.1,
+"area": "Anaheim",
+"web": "https://www.jafaria.org/jafaria_site/"
+}
+],
+"washington-dc": [
+{
+"name": "American Fazl Mosque",
+"km": 1.3,
+"area": "Washington",
+"web": ""
+},
+{
+"name": "Masjid Muhammad",
+"km": 1.9,
+"area": "",
+"web": "https://thenationsmosque.org/"
+},
+{
+"name": "Islamic Mosque and Cultural Center",
+"km": 2.0,
+"area": "",
+"web": ""
+},
+{
+"name": "First Hijrah Muslim Community Center",
+"km": 4.2,
+"area": "Washington",
+"web": "http://firsthijrah.org"
+},
+{
+"name": "Masjid Ahlul Quran Wal Hadeeth",
+"km": 5.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Avondale Islamic Center",
+"km": 6.8,
+"area": "Mount Rainier",
+"web": ""
+},
+{
+"name": "Muhammed Mosque",
+"km": 7.8,
+"area": "",
+"web": ""
+},
+{
+"name": "Baitul Mukarram Masjid",
+"km": 7.9,
+"area": "",
+"web": ""
+}
+],
+"san-antonio": [
+{
+"name": "Islamic Academy of San Antonio",
+"km": 12.8,
+"area": "San Antonio",
+"web": ""
+},
+{
+"name": "Muslim Children Education & Civic Center",
+"km": 18.8,
+"area": "San Antonio",
+"web": "https://www.mcecc.com/"
+}
+],
+"frisco": [
+{
+"name": "Bait-ul-Ikram Mosque",
+"km": 11.8,
+"area": "Allen",
+"web": "https://islamindallas.org/"
+},
+{
+"name": "Ismaili Jamatkhana",
+"km": 14.2,
+"area": "Plano",
+"web": ""
+},
+{
+"name": "City of Knowledge",
+"km": 14.3,
+"area": "Carrollton",
+"web": "https://cfkdfw.org/"
+},
+{
+"name": "McKinney Islamic Center",
+"km": 15.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Minhaj ul Quran International",
+"km": 16.4,
+"area": "",
+"web": ""
+},
+{
+"name": "MOMIN of Texas",
+"km": 17.3,
+"area": "Dallas",
+"web": ""
+}
+],
+"london": [
+{
+"name": "Islamic Centre",
+"km": 0.8,
+"area": "London",
+"web": "https://www.iccl.org.uk"
+},
+{
+"name": "Muslim World League - London Office",
+"km": 1.5,
+"area": "London",
+"web": "https://www.mwllo.org.uk/"
+},
+{
+"name": "Mayfair Islamic Centre",
+"km": 1.5,
+"area": "London",
+"web": "http://mayfairislamiccentre.org.uk/"
+},
+{
+"name": "Holborn Muslim Community & Welfare Association",
+"km": 1.7,
+"area": "Holborn",
+"web": "https://holbornmosque.org/"
+},
+{
+"name": "Shahjalal Jame Masjid Euston Mosque",
+"km": 2.3,
+"area": "",
+"web": ""
+},
+{
+"name": "King's Cross Mosque and Islamic Centre",
+"km": 2.4,
+"area": "King's Cross",
+"web": "https://www.kingscrossmosque.org/"
+},
+{
+"name": "Somers Town Islamic Cultural and Education Centre",
+"km": 2.5,
+"area": "London",
+"web": ""
+},
+{
+"name": "Bait-ul-Aziz Islamic Cultural Centre",
+"km": 2.6,
+"area": "London",
+"web": "https://baitulazizmosque.org.uk"
+}
+],
+"birmingham": [
+{
+"name": "The Cube: Birmingham City Centre Islamic Hub",
+"km": 1.0,
+"area": "",
+"web": "https://www.instagram.com/thecube_bham/"
+},
+{
+"name": "Nimab Trust Mosque",
+"km": 1.2,
+"area": "Birmingham",
+"web": ""
+},
+{
+"name": "Khalm-e-Nubudwat Educational Centre",
+"km": 1.7,
+"area": "Birmingham",
+"web": ""
+},
+{
+"name": "Masjid E Noor",
+"km": 1.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Aston Mosque & Community Centre",
+"km": 1.9,
+"area": "",
+"web": ""
+},
+{
+"name": "Jalalabad Sunni Jame Masjid & Islamic Community Centre",
+"km": 2.0,
+"area": "",
+"web": ""
+},
+{
+"name": "Darul Barkaat Mosque",
+"km": 2.0,
+"area": "Birmingham",
+"web": ""
+},
+{
+"name": "Shahjalal (R:) Sunnia Mosque & Islamic Community Centre",
+"km": 2.1,
+"area": "",
+"web": ""
+}
+],
+"bradford": [
+{
+"name": "Bradford Central Mosque",
+"km": 0.2,
+"area": "Bradford",
+"web": "https://www.bradfordcentralmosque.org/contact.html"
+},
+{
+"name": "Sufat-ul-Islam Association",
+"km": 0.2,
+"area": "",
+"web": ""
+},
+{
+"name": "The IslamBradford Centre",
+"km": 0.4,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Nimrah",
+"km": 0.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Jaamiah Khatamur Rabiyeen",
+"km": 0.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Madinatul Uloom",
+"km": 0.6,
+"area": "",
+"web": ""
+},
+{
+"name": "Mohiuddin Institute",
+"km": 0.6,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Doha",
+"km": 0.7,
+"area": "",
+"web": ""
+}
+],
+"manchester": [
+{
+"name": "Muslim Youth Foundation (MYF)",
+"km": 0.5,
+"area": "Manchester",
+"web": ""
+},
+{
+"name": "Manchester Islamic Centre",
+"km": 1.1,
+"area": "Manchester",
+"web": ""
+},
+{
+"name": "Cavendish Prayer Rooms",
+"km": 1.3,
+"area": "Manchester",
+"web": ""
+},
+{
+"name": "Al Murtaza Trust",
+"km": 1.4,
+"area": "Manchester",
+"web": ""
+},
+{
+"name": "Abu Bakar Mosque",
+"km": 1.7,
+"area": "Manchester",
+"web": ""
+},
+{
+"name": "Markaz Dar-ul-ehsan Manchester",
+"km": 1.7,
+"area": "Manchester",
+"web": ""
+},
+{
+"name": "Dar Al-Islam Foundation",
+"km": 1.8,
+"area": "Manchester",
+"web": ""
+},
+{
+"name": "Jamia-Tul-Muntazir Manchester",
+"km": 2.0,
+"area": "Manchester",
+"web": "https://www.jtmuk.org/"
+}
+],
+"luton": [
+{
+"name": "Luton Turkish Community Centre",
+"km": 0.2,
+"area": "Luton",
+"web": ""
+},
+{
+"name": "Bury Park Masjid",
+"km": 0.8,
+"area": "Luton",
+"web": ""
+},
+{
+"name": "Masjid e Noor",
+"km": 0.9,
+"area": "Luton",
+"web": "https://masjidnoorluton.co.uk/"
+},
+{
+"name": "Kokni Community Luton",
+"km": 0.9,
+"area": "Luton",
+"web": "https://masjid.kokniluton.co.uk"
+},
+{
+"name": "Farley Hill Jame Masjid",
+"km": 1.0,
+"area": "Luton",
+"web": ""
+},
+{
+"name": "Masjid Al-Ghurabaa",
+"km": 1.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Madinah Masjid",
+"km": 1.1,
+"area": "Luton",
+"web": ""
+},
+{
+"name": "Jalalabad Jame Masjid",
+"km": 1.2,
+"area": "",
+"web": "http://jalalabadjamemasjid.org.uk/"
+}
+],
+"glasgow": [
+{
+"name": "Glasgow Central Mosque",
+"km": 1.3,
+"area": "Gorbals",
+"web": "https://centralmosque.co.uk/"
+},
+{
+"name": "Al Furqan Mosque",
+"km": 1.5,
+"area": "Glasgow",
+"web": "https://www.alfurqanmosque.com/"
+},
+{
+"name": "Bait-Ur-Rahman Mosque",
+"km": 2.4,
+"area": "Glasgow",
+"web": ""
+},
+{
+"name": "Khazra Central Mosque",
+"km": 2.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Zia Ul Quran Centre",
+"km": 3.1,
+"area": "Glasgow",
+"web": "https://zia-ul-quran.org"
+},
+{
+"name": "Madrasa Taleem ul Islam",
+"km": 3.2,
+"area": "",
+"web": ""
+},
+{
+"name": "Ibrahim Masjid",
+"km": 3.3,
+"area": "Ibrox",
+"web": "https://ibrahim-masjid.org.uk/"
+},
+{
+"name": "AFECC Glasgow",
+"km": 3.3,
+"area": "Glasgow",
+"web": "https://www.afecc.co.uk/"
+}
+],
+"leicester": [
+{
+"name": "Hamidiye Camii",
+"km": 0.1,
+"area": "Leicester",
+"web": "https://www.suleymaniye.org/"
+},
+{
+"name": "DMU Prayer room",
+"km": 0.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid an-Noor",
+"km": 0.8,
+"area": "Leicester",
+"web": ""
+},
+{
+"name": "Masjid Salahuddin",
+"km": 1.0,
+"area": "Leicester",
+"web": ""
+},
+{
+"name": "Masjid Al-Furqan",
+"km": 1.0,
+"area": "Leicester",
+"web": ""
+},
+{
+"name": "Masjid Al Huda",
+"km": 1.1,
+"area": "Leicester",
+"web": ""
+},
+{
+"name": "Masjid al Quba",
+"km": 1.2,
+"area": "Leicester",
+"web": ""
+},
+{
+"name": "Hajra Masjid",
+"km": 1.3,
+"area": "Leicester",
+"web": ""
+}
+],
+"sheffield": [
+{
+"name": "Al-Huda Islamic Centre",
+"km": 1.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Risalah",
+"km": 1.2,
+"area": "",
+"web": ""
+},
+{
+"name": "Fatima Community Centre",
+"km": 1.3,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Mohammed",
+"km": 1.4,
+"area": "Sheffield",
+"web": ""
+},
+{
+"name": "At-Taqwa Centre",
+"km": 1.4,
+"area": "",
+"web": ""
+},
+{
+"name": "Baitul Afiyat Mosque",
+"km": 1.5,
+"area": "Sheffield",
+"web": ""
+},
+{
+"name": "Anjuma E Haideria",
+"km": 1.5,
+"area": "Sheffield",
+"web": ""
+},
+{
+"name": "Wybourn Islamic Centre",
+"km": 1.5,
+"area": "Sheffield",
+"web": ""
+}
+],
+"leeds": [
+{
+"name": "The Green Room",
+"km": 0.4,
+"area": "",
+"web": ""
+},
+{
+"name": "AhlulBayt Cultural Centre",
+"km": 0.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Cemetery Lodge Prayer Room",
+"km": 1.1,
+"area": "Leeds",
+"web": "https://leedsisoc.com/"
+},
+{
+"name": "Al-Rahmah Faith Centre",
+"km": 1.4,
+"area": "",
+"web": ""
+},
+{
+"name": "Leeds Grand Mosque",
+"km": 1.4,
+"area": "Leeds",
+"web": "https://leedsgrandmosque.com/"
+},
+{
+"name": "Lincoln Green Mosque",
+"km": 1.4,
+"area": "Leeds",
+"web": ""
+},
+{
+"name": "Makki Masjid",
+"km": 1.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Al Madina Jamia Mosque",
+"km": 1.7,
+"area": "",
+"web": ""
+}
+],
+"liverpool": [
+{
+"name": "Prayer Room",
+"km": 2.0,
+"area": "",
+"web": ""
+},
+{
+"name": "Abdullah Quilliam Mosque",
+"km": 2.2,
+"area": "Liverpool",
+"web": ""
+},
+{
+"name": "Al-Rahma Mosque",
+"km": 2.6,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Omar Mukhtar",
+"km": 2.6,
+"area": "",
+"web": ""
+},
+{
+"name": "Baitul Lateef Mosque",
+"km": 3.0,
+"area": "Liverpool",
+"web": ""
+},
+{
+"name": "Wirral Deen Centre",
+"km": 3.7,
+"area": "Birkenhead",
+"web": ""
+},
+{
+"name": "Felicity House",
+"km": 4.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Jummah Salah in Sanctuary",
+"km": 13.7,
+"area": "",
+"web": "https://sthk.merseywestlancs.nhs.uk/spiritual-care-and-chaplaincy-services"
+}
+],
+"nottingham": [
+{
+"name": "NTU Prayer Room",
+"km": 0.3,
+"area": "",
+"web": ""
+},
+{
+"name": "Lenton Muslim Centre",
+"km": 0.9,
+"area": "Nottingham",
+"web": ""
+},
+{
+"name": "Abu Bakr As-Saddique Mosque",
+"km": 1.0,
+"area": "Nottingham",
+"web": ""
+},
+{
+"name": "Nottingham Islamic Centre",
+"km": 1.1,
+"area": "Nottingham",
+"web": ""
+},
+{
+"name": "Shah Jalal Masjiid",
+"km": 1.2,
+"area": "Nottingham",
+"web": ""
+},
+{
+"name": "Jamia Islamia Education Centre",
+"km": 1.2,
+"area": "Nottingham",
+"web": ""
+},
+{
+"name": "Al Zahra Foundation",
+"km": 1.3,
+"area": "Nottingham",
+"web": "http://www.alzahrafoundation.org.uk/"
+},
+{
+"name": "Masjid-E-Bilaal",
+"km": 1.4,
+"area": "",
+"web": ""
+}
+],
+"coventry": [
+{
+"name": "The Islamic Brotherhood Pakistan And Kashmir Family Centre",
+"km": 1.7,
+"area": "Coventry",
+"web": ""
+},
+{
+"name": "Jamia Mosque",
+"km": 1.7,
+"area": "Coventry",
+"web": ""
+},
+{
+"name": "Masjid Zeenat-Ul-Islam",
+"km": 2.0,
+"area": "Coventry",
+"web": "https://masjidzeenatulislam.org.uk"
+},
+{
+"name": "Faizen E Islam",
+"km": 2.9,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Prayer Hall",
+"km": 4.0,
+"area": "Coventry",
+"web": ""
+},
+{
+"name": "Baitul Ehsan Mosque",
+"km": 13.2,
+"area": "Leamington Spa",
+"web": ""
+},
+{
+"name": "Masjid Albirr",
+"km": 13.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Solihull Central Masjid and Community Centre",
+"km": 16.4,
+"area": "Solihull",
+"web": "https://solihullmasjid.org.uk/"
+}
+],
+"edinburgh": [
+{
+"name": "Anwar-E-Madina Mosque and Community Centre",
+"km": 0.8,
+"area": "",
+"web": "http://www.anwar-e-madina.co.uk/"
+},
+{
+"name": "Shahjalal Mosque",
+"km": 0.8,
+"area": "",
+"web": ""
+},
+{
+"name": "Edinburgh Central Mosque",
+"km": 0.9,
+"area": "Edinburgh",
+"web": "https://www.edmosque.org/"
+},
+{
+"name": "Dar Al-Arqam",
+"km": 1.2,
+"area": "",
+"web": "http://www.dar-alarqam.org/"
+},
+{
+"name": "Mohiuddin Jamia Masjid & Education Centre",
+"km": 2.3,
+"area": "Edinburgh",
+"web": ""
+},
+{
+"name": "Shia Community Centre Edinburgh",
+"km": 2.4,
+"area": "Edinburgh",
+"web": "https://mosques.muslimsinbritain.org/maps-mobile.php?id=591"
+},
+{
+"name": "Polwarth Mosque",
+"km": 2.5,
+"area": "",
+"web": "https://www.polwarth-masjid.co.uk/"
+},
+{
+"name": "IQRA Academy",
+"km": 2.9,
+"area": "",
+"web": "https://www.iqraacademy.org/"
+}
+],
+"slough": [
+{
+"name": "Jamia Masjid and Islamic Centre",
+"km": 0.9,
+"area": "Slough",
+"web": ""
+},
+{
+"name": "Jamia Masjid Ghausia",
+"km": 1.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Al-Madani Masjid",
+"km": 4.0,
+"area": "Slough",
+"web": "https://al-madani.org"
+},
+{
+"name": "Faizan-e-Madinah",
+"km": 4.1,
+"area": "Langley",
+"web": "https://www.langleymasjid.com"
+},
+{
+"name": "Medina Mosque",
+"km": 4.2,
+"area": "",
+"web": ""
+},
+{
+"name": "Uxbridge Muslim Community Centre",
+"km": 8.3,
+"area": "",
+"web": ""
+},
+{
+"name": "Al Falah Islamic Education Centre",
+"km": 8.3,
+"area": "",
+"web": "https://www.alfalahcentre.org/"
+},
+{
+"name": "Jamia Masjid",
+"km": 8.3,
+"area": "",
+"web": "https://www.jm-wd.org/"
+}
+],
+"bolton": [
+{
+"name": "Madinah Masjid",
+"km": 0.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Jamia Alavia Bolton",
+"km": 0.8,
+"area": "Bolton",
+"web": ""
+},
+{
+"name": "Masjid Al Falah",
+"km": 0.9,
+"area": "Bolton",
+"web": ""
+},
+{
+"name": "Markaz e Ahlebait",
+"km": 1.0,
+"area": "Bolton",
+"web": "https://markazeahlebait.org/"
+},
+{
+"name": "Ashrafia Mosque",
+"km": 1.0,
+"area": "",
+"web": ""
+},
+{
+"name": "Makkah Masjid",
+"km": 1.2,
+"area": "Bolton",
+"web": ""
+},
+{
+"name": "Zakariyya Jaam'e Masjid",
+"km": 1.3,
+"area": "",
+"web": "https://www.zakariyyamasjid.co.uk/"
+},
+{
+"name": "Jamia Madina Masjid",
+"km": 1.3,
+"area": "Bolton",
+"web": ""
+}
+],
+"cardiff": [
+{
+"name": "Dar Ul-Isra",
+"km": 0.9,
+"area": "Cardiff",
+"web": "https://www.darulisra.org.uk"
+},
+{
+"name": "Rabbaniah Islamic Cultural Centre",
+"km": 0.9,
+"area": "",
+"web": ""
+},
+{
+"name": "Noor El Islam Mosque",
+"km": 1.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid At-Tawheed",
+"km": 1.3,
+"area": "Cardiff",
+"web": ""
+},
+{
+"name": "Shah Jalal Mosque",
+"km": 1.3,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Abubakr",
+"km": 1.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Bilal Mosque",
+"km": 1.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Madina Mosque",
+"km": 1.6,
+"area": "",
+"web": ""
+}
+],
+"blackburn": [
+{
+"name": "Kurdish Community Blackburn",
+"km": 0.3,
+"area": "Blackburn",
+"web": ""
+},
+{
+"name": "Masjid Tauheedul Islam",
+"km": 0.4,
+"area": "Blackburn",
+"web": "https://www.masjidetauheedulislam.com/"
+},
+{
+"name": "Makki Masjid",
+"km": 0.6,
+"area": "Blackburn",
+"web": "http://makkimasjidblackburn.co.uk/"
+},
+{
+"name": "Masjid Al-Hidayah",
+"km": 0.6,
+"area": "Blackburn",
+"web": ""
+},
+{
+"name": "Leamington Road Mosque",
+"km": 1.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Musalla Maryam",
+"km": 1.1,
+"area": "",
+"web": "https://www.musallamaryam.com/"
+},
+{
+"name": "Masjid-al-Momineen",
+"km": 1.3,
+"area": "",
+"web": "https://www.al-momineen.org/"
+},
+{
+"name": "Masjide Noorul Islam",
+"km": 1.3,
+"area": "Blackburn",
+"web": "https://masjidenoorulislam.org/"
+}
+],
+"oldham": [
+{
+"name": "Jamay Masjid Muhammadia Saifia",
+"km": 0.6,
+"area": "Oldham",
+"web": ""
+},
+{
+"name": "Greengate Jamia Mosque",
+"km": 0.7,
+"area": "Oldham",
+"web": "https://www.greengatejamiamasjid.co.uk/"
+},
+{
+"name": "Jalalabad Jamay Masjid",
+"km": 0.7,
+"area": "Oldham",
+"web": ""
+},
+{
+"name": "Al-Madina Jamia Masjid",
+"km": 0.9,
+"area": "Oldham",
+"web": "https://almadinajamia.co.uk/"
+},
+{
+"name": "Al-Madina Islamic Educational and Cultural Centre",
+"km": 0.9,
+"area": "Oldham",
+"web": "https://almadinajamia.co.uk/"
+},
+{
+"name": "Al-Khasra Masjid",
+"km": 0.9,
+"area": "Oldham",
+"web": ""
+},
+{
+"name": "Ross Street Masjid",
+"km": 0.9,
+"area": "Oldham",
+"web": "https://www.rossstreetmasjid.org/"
+},
+{
+"name": "Noorani Masjid",
+"km": 1.0,
+"area": "Oldham",
+"web": ""
+}
+],
+"toronto": [
+{
+"name": "Masjid Toronto",
+"km": 0.3,
+"area": "",
+"web": "https://centres.macnet.ca/masjidtoronto/"
+},
+{
+"name": "Masjid Omar Bin Khatab",
+"km": 1.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjidur Rahmah",
+"km": 1.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Regent Park Islamic Resource Center",
+"km": 1.8,
+"area": "",
+"web": ""
+},
+{
+"name": "Toronto Islamic Centre (TIC) & Community Services",
+"km": 2.2,
+"area": "",
+"web": ""
+},
+{
+"name": "https://papemosque.ca/",
+"km": 3.8,
+"area": "",
+"web": "https://papemosque.ca/"
+},
+{
+"name": "Hamza Mosque",
+"km": 4.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Information & Dawah Centre International",
+"km": 4.4,
+"area": "Toronto",
+"web": "https://www.islaminfo.com/"
+}
+],
+"mississauga": [
+{
+"name": "Muslim Welfare Center (Masjid and Food Bank)",
+"km": 1.6,
+"area": "",
+"web": "https://www.muslimwelfarecentre.com/"
+},
+{
+"name": "Masjid Al Farooq",
+"km": 2.6,
+"area": "Mississauga",
+"web": "https://www.masjidfarooq.com/"
+},
+{
+"name": "Shalimar",
+"km": 3.4,
+"area": "Mississauga",
+"web": ""
+},
+{
+"name": "Bab ul Ilm - Bani Hashim Society",
+"km": 4.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Rahmatul-lil-Alameen",
+"km": 4.3,
+"area": "Mississauga",
+"web": "https://www.rahmatmasjid.com/"
+},
+{
+"name": "966 ICNA Masjid",
+"km": 4.3,
+"area": "Mississauga",
+"web": "https://icna.website/966icnamasjid/"
+},
+{
+"name": "Al Huda Institute Canada",
+"km": 4.4,
+"area": "Mississauga",
+"web": ""
+},
+{
+"name": "Jame Masjid Mississauga",
+"km": 4.9,
+"area": "",
+"web": "http://blog.jamemasjid.org/"
+}
+],
+"ottawa": [
+{
+"name": "Islam Care Centre",
+"km": 0.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Outaouais Islamic Center",
+"km": 2.8,
+"area": "Gatineau",
+"web": "https://www.cio-oic.ca/"
+},
+{
+"name": "Ottawa South Mosque",
+"km": 3.2,
+"area": "",
+"web": "https://ottawasouthmosque.ca/"
+},
+{
+"name": "Abu Thar al-Gofary Mosque, Ottawa",
+"km": 3.2,
+"area": "",
+"web": ""
+},
+{
+"name": "Ottawa Muslim Association",
+"km": 4.1,
+"area": "",
+"web": "https://www.ottawamosque.ca/"
+},
+{
+"name": "East Ottawa Masjid",
+"km": 4.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Iman Ali (As) Masjid",
+"km": 6.4,
+"area": "",
+"web": ""
+},
+{
+"name": "Ottawa Islamic Centre & Assalam Mosque",
+"km": 7.4,
+"area": "",
+"web": ""
+}
+],
+"montreal": [
+{
+"name": "Fatima-Zohra",
+"km": 1.1,
+"area": "Montréal",
+"web": ""
+},
+{
+"name": "Centre Khadijah",
+"km": 2.4,
+"area": "",
+"web": ""
+},
+{
+"name": "Mosquée Tawuba",
+"km": 3.4,
+"area": "",
+"web": ""
+},
+{
+"name": "Baitul Ma'moor Mosque",
+"km": 4.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Centre Islamique de Verdun",
+"km": 4.8,
+"area": "",
+"web": "https://centres.macnet.ca/civ/fr/"
+},
+{
+"name": "Mosquée Al Falah",
+"km": 4.9,
+"area": "Montréal",
+"web": ""
+},
+{
+"name": "Taiba Mosque",
+"km": 5.0,
+"area": "Montréal",
+"web": ""
+},
+{
+"name": "Mosque Nour Al Medina",
+"km": 5.2,
+"area": "",
+"web": ""
+}
+],
+"calgary": [
+{
+"name": "IISC Downtown Mosque",
+"km": 0.9,
+"area": "Calgary",
+"web": ""
+},
+{
+"name": "Bab UL Hawaij Islamic Centre of Calgary",
+"km": 5.0,
+"area": "",
+"web": "https://babulhawaijcalgary.com/"
+},
+{
+"name": "Omar Bin Al-Khattab Musalla",
+"km": 5.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Ismaili Jamatkhana & Centre",
+"km": 6.0,
+"area": "Calgary",
+"web": ""
+},
+{
+"name": "Akram Jomaa Islamic Centre",
+"km": 6.9,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid-e-Maryam Calgary",
+"km": 9.3,
+"area": "",
+"web": ""
+},
+{
+"name": "Baitun Nur Mosque",
+"km": 9.5,
+"area": "Calgary",
+"web": "https://baitunnur.org/"
+},
+{
+"name": "Westwinds Ismaili Jamatkhana",
+"km": 9.5,
+"area": "",
+"web": ""
+}
+],
+"edmonton": [
+{
+"name": "Masjid At-Taqwa",
+"km": 0.6,
+"area": "Edmonton",
+"web": "https://masjidtaqwa.ca/"
+},
+{
+"name": "Sahaba Mosque",
+"km": 1.2,
+"area": "Edmonton",
+"web": "http://www.sahabamosque.ca/"
+},
+{
+"name": "An-Najashi Musallah",
+"km": 1.7,
+"area": "Edmonton",
+"web": ""
+},
+{
+"name": "Masjid Al-Imam Al-Shafie",
+"km": 2.7,
+"area": "Edmonton",
+"web": ""
+},
+{
+"name": "Masjid Quba",
+"km": 2.7,
+"area": "Edmonton",
+"web": "https://masjidquba.ca/"
+},
+{
+"name": "Faizan-e-Madina Islamic Centre",
+"km": 2.7,
+"area": "Edmonton",
+"web": ""
+},
+{
+"name": "Muslim Community Mosque",
+"km": 2.9,
+"area": "Edmonton",
+"web": ""
+},
+{
+"name": "Bait-ul-Hadi",
+"km": 3.9,
+"area": "Edmonton",
+"web": "https://www.ahmadiyya.ca/mosques/baitul-hadi"
+}
+],
+"brampton": [
+{
+"name": "Jamiat-Ul-Ansar of Brampton",
+"km": 0.9,
+"area": "Brampton",
+"web": "http://www.jamiatulansar.ca/"
+},
+{
+"name": "Mubarak Mosque",
+"km": 3.5,
+"area": "Brampton",
+"web": "https://www.ahmadiyya.ca/mosques/masjid-mubarak"
+},
+{
+"name": "Brampton Islamic Center",
+"km": 4.7,
+"area": "Brampton",
+"web": ""
+},
+{
+"name": "Makki Masjid",
+"km": 5.9,
+"area": "Brampton",
+"web": ""
+},
+{
+"name": "Naqshbandi Sufi Toronto",
+"km": 6.3,
+"area": "",
+"web": ""
+},
+{
+"name": "Islamic Forum of Canada",
+"km": 6.9,
+"area": "",
+"web": ""
+},
+{
+"name": "Mount Pleasant Islamic Center",
+"km": 7.6,
+"area": "Brampton",
+"web": "https://www.mpicbrampton.com/"
+},
+{
+"name": "Masumeen Islamic Centre",
+"km": 8.2,
+"area": "Brampton",
+"web": "https://jaffari.org/"
+}
+],
+"scarborough": [
+{
+"name": "Masjid Al Jannah",
+"km": 0.1,
+"area": "",
+"web": "https://www.masjidaljannah.ca/"
+},
+{
+"name": "Jaame Masjid Scarborough",
+"km": 2.0,
+"area": "Toronto",
+"web": ""
+},
+{
+"name": "Islamic Foundation of Toronto",
+"km": 2.5,
+"area": "Toronto",
+"web": ""
+},
+{
+"name": "Masjid Bilal",
+"km": 3.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Scarborough Muslim Association - Jame Abu Bakr Siddique Masjid",
+"km": 3.7,
+"area": "Toronto",
+"web": ""
+},
+{
+"name": "Spiritual Society Canada",
+"km": 3.8,
+"area": "",
+"web": "https://ssci.ad-din.site/"
+},
+{
+"name": "Masjid Huzaifah",
+"km": 4.0,
+"area": "Scarborough",
+"web": "https://www.masjidhuzaifah.com/"
+},
+{
+"name": "Islamic Institute of Toronto",
+"km": 4.7,
+"area": "Toronto",
+"web": "https://islam.ca/"
+}
+],
+"vancouver": [
+{
+"name": "Al-Masjid al-Jamia Vancouver",
+"km": 2.0,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Omar Al-Farooq",
+"km": 4.3,
+"area": "Vancouver",
+"web": "https://www.masjidomar.ca/"
+},
+{
+"name": "Abu Bakr Siddiq Islamic Centre Brentwood",
+"km": 7.8,
+"area": "",
+"web": "https://asicbrentwood.ca/"
+},
+{
+"name": "The Ismaili Centre Burnaby",
+"km": 8.4,
+"area": "",
+"web": "https://the.ismaili/ismailicentres/the-ismaili-centre-burnaby"
+},
+{
+"name": "Marpole Musalla",
+"km": 8.7,
+"area": "Vancouver",
+"web": "https://nwmis.org/"
+},
+{
+"name": "Ismaili Jamatkhana Richmond",
+"km": 11.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Ismaili Jamatkhana",
+"km": 11.7,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Al-Salaam",
+"km": 12.3,
+"area": "Burnaby",
+"web": "https://www.bcmaburnaby.org/"
+}
+],
+"surrey": [
+{
+"name": "Masjid Al Mukaromah",
+"km": 1.0,
+"area": "Surrey",
+"web": ""
+},
+{
+"name": "Masjid al-Huda",
+"km": 2.2,
+"area": "Surrey",
+"web": ""
+},
+{
+"name": "Surrey Jami'a Mosque",
+"km": 6.7,
+"area": "",
+"web": "https://org.thebcma.com/surreydelta"
+},
+{
+"name": "Fraser Valley Jamatkhanna",
+"km": 7.9,
+"area": "",
+"web": "https://fraser-valley.edan.io/"
+},
+{
+"name": "Masjid-ur-Raman",
+"km": 8.4,
+"area": "",
+"web": ""
+},
+{
+"name": "Baitur Rahman Mosque",
+"km": 9.0,
+"area": "Delta",
+"web": "https://www.vancouvermosque.ca/"
+},
+{
+"name": "Masjid al-Hidayah - Islamic Society of BC",
+"km": 9.3,
+"area": "",
+"web": "https://theisbc.ca/"
+},
+{
+"name": "Masjid Al-Salaam",
+"km": 10.0,
+"area": "Burnaby",
+"web": "https://www.bcmaburnaby.org/"
+}
+],
+"winnipeg": [
+{
+"name": "Manitoba Dawah Centre",
+"km": 0.8,
+"area": "",
+"web": ""
+},
+{
+"name": "Winnipeg Central Mosque",
+"km": 1.9,
+"area": "",
+"web": ""
+},
+{
+"name": "Yaseen Centre of Manitoba",
+"km": 2.0,
+"area": "",
+"web": ""
+},
+{
+"name": "Abu Bakr Al-Siddiq Community Centre and Masjid",
+"km": 2.1,
+"area": "",
+"web": ""
+},
+{
+"name": "Ahmadiyya Muslim Center",
+"km": 3.6,
+"area": "Winnipeg",
+"web": "https://www.ahmadiyya.ca/mosques/winnipeg"
+},
+{
+"name": "Faizan-E-Makkah",
+"km": 3.6,
+"area": "",
+"web": ""
+},
+{
+"name": "Manitoba Islamic Association Community Center",
+"km": 11.8,
+"area": "",
+"web": "https://www.miaonline.org/"
+}
+],
+"london-ontario": [
+{
+"name": "Hyatt Mosque and Center",
+"km": 1.8,
+"area": "London",
+"web": "https://www.hyattmosquecenter.com/"
+},
+{
+"name": "London Muslim Mosque",
+"km": 2.2,
+"area": "London",
+"web": ""
+},
+{
+"name": "Baitul Ahad Mosque",
+"km": 2.7,
+"area": "London",
+"web": "https://www.ahmadiyya.ca/mosques/baitul-ahad"
+},
+{
+"name": "Bosnian Canadian Islamic Centre",
+"km": 2.8,
+"area": "",
+"web": "https://bkic.ca/"
+},
+{
+"name": "Islamic Centre of Southwest Ontario",
+"km": 7.3,
+"area": "London",
+"web": "https://islamiccentre.ca/"
+}
+],
+"windsor": [
+{
+"name": "Noor-ul-Islam",
+"km": 1.8,
+"area": "Windsor",
+"web": ""
+},
+{
+"name": "Masjid Al-Fatiha",
+"km": 3.6,
+"area": "Detroit",
+"web": ""
+},
+{
+"name": "Windsor Mosque",
+"km": 4.2,
+"area": "",
+"web": ""
+},
+{
+"name": "Baitul Ehsaan Mosque",
+"km": 4.5,
+"area": "Windsor",
+"web": "https://www.ahmadiyya.ca/mosques/baitul-ehsaan"
+},
+{
+"name": "Windsor Islamic Association Centre",
+"km": 4.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Baitul Islam Mosque",
+"km": 8.0,
+"area": "Detroit",
+"web": ""
+},
+{
+"name": "Masjid Mu'ath Bin Jabal",
+"km": 8.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Ideal Islamic Center",
+"km": 8.9,
+"area": "",
+"web": ""
+}
+],
+"miami": [],
+"oklahoma-city": [],
+"huddersfield": [
+{
+"name": "Masjid Usman",
+"km": 0.3,
+"area": "",
+"web": ""
+},
+{
+"name": "Masjid Iman",
+"km": 0.5,
+"area": "",
+"web": ""
+},
+{
+"name": "Baitus Samad",
+"km": 0.7,
+"area": "Huddersfield",
+"web": ""
+},
+{
+"name": "Faizan e Madinah",
+"km": 0.8,
+"area": "",
+"web": ""
+},
+{
+"name": "Jamia Masjid Ghausia",
+"km": 1.0,
+"area": "",
+"web": ""
+},
+{
+"name": "Jamia Masjid Noor",
+"km": 1.1,
+"area": "Thornton Lodge",
+"web": "https://www.jamiamasjidnoor.co.uk/"
+},
+{
+"name": "Madni Jamia Masjid",
+"km": 1.2,
+"area": "",
+"web": ""
+},
+{
+"name": "Shah Jalal Masjid",
+"km": 1.2,
+"area": "",
+"web": ""
 }
 ]
 }

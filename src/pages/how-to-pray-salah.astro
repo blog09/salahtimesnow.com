@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+const faq: [string, string][] = [
+  ['How many times a day do Muslims pray?', 'Five obligatory prayers: Fajr (dawn), Dhuhr (midday), Asr (afternoon), Maghrib (sunset) and Isha (night), with 17 obligatory rakats in total.'],
+  ['What do you recite in every rakat?', 'Surah Al-Fatiha is recited standing in every rakat. In the first two rakats another surah or some verses are usually added after it.'],
+  ['Do I need wudu before praying?', 'Yes. Ritual purity (wudu) is a condition of salah. If water cannot be used, tayammum (dry ablution) takes its place.'],
+];
+const schema = [{ '@context': 'https://schema.org', '@type': 'HowTo', name: 'How to pray a two-rakat salah', step: ['Make wudu and face the qibla', 'Make the intention', 'Say Allahu Akbar (opening takbir)', 'Recite Al-Fatiha and a surah standing', 'Bow (ruku)', 'Stand up', 'Prostrate twice (sujud) with a sitting between', 'Repeat for the second rakat', 'Sit for the tashahhud', 'End with the salam to the right and left'].map((t) => ({ '@type': 'HowToStep', text: t })) },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }];
+---
+<Base schema={schema} title="How to Pray Salah Step by Step: A Beginner's Guide" description="How to pray salah, step by step: preparation, intention, takbir, standing, ruku, sujud, tashahhud and salam, what to recite in each position, and how 3- and 4-rakat prayers differ." crumbs={[['How to pray salah']]}>
+  <h1>How to pray salah step by step</h1>
+  <p class="hl">Each prayer is made of units called <strong>rakats</strong>. In every rakat you <strong>stand and recite Al-Fatiha, bow (ruku), stand, then prostrate twice (sujud)</strong>. After every second rakat and at the end you <strong>sit for the tashahhud</strong>, and the prayer ends with the <strong>salam</strong> to the right and left.</p>
+
+  <h2>Before you pray</h2>
+  <ul>
+    <li><strong>Purity:</strong> perform <a href="/how-to-perform-wudu/">wudu</a>; body, clothes and the place of prayer should be clean.</li>
+    <li><strong>Time:</strong> each prayer has its own window; check <a href="/cities/">today's prayer times</a>.</li>
+    <li><strong>Direction:</strong> face the <a href="/qibla-direction/">qibla</a>, toward the Kaaba in Makkah.</li>
+    <li><strong>Covering:</strong> modest clothing covering the awrah.</li>
+  </ul>
+
+  <h2>One rakat, position by position</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Position</th><th>What to do</th><th>Commonly recited</th></tr></thead>
+    <tbody>
+      <tr><td>Intention (niyyah)</td><td style="white-space:normal">Intend in your heart which prayer you are praying and how many rakats</td><td style="white-space:normal">No set words are required</td></tr>
+      <tr><td>Opening takbir</td><td style="white-space:normal">Raise the hands and begin the prayer</td><td style="white-space:normal">Allahu Akbar ("God is the greatest")</td></tr>
+      <tr><td>Standing (qiyam)</td><td style="white-space:normal">Stand, eyes on the place of prostration</td><td style="white-space:normal">An opening supplication, then Surah Al-Fatiha, then another surah in the first two rakats</td></tr>
+      <tr><td>Bowing (ruku)</td><td style="white-space:normal">Bow with hands on the knees and back straight</td><td style="white-space:normal">Subhana Rabbiyal Azim ("Glory to my Lord the Most Great"), usually three times</td></tr>
+      <tr><td>Rising</td><td style="white-space:normal">Stand upright again</td><td style="white-space:normal">Sami Allahu liman hamidah, Rabbana lakal hamd</td></tr>
+      <tr><td>Prostration (sujud)</td><td style="white-space:normal">Forehead and nose, both palms, knees and toes on the ground</td><td style="white-space:normal">Subhana Rabbiyal A'la ("Glory to my Lord the Most High"), usually three times</td></tr>
+      <tr><td>Sitting between</td><td style="white-space:normal">Sit up briefly</td><td style="white-space:normal">Rabbighfir li ("My Lord, forgive me")</td></tr>
+      <tr><td>Second sujud</td><td style="white-space:normal">Prostrate again as before</td><td style="white-space:normal">As in the first sujud</td></tr>
+    </tbody>
+  </table></div>
+  <p>Saying "Allahu Akbar" marks each move between positions. That completes one rakat; stand up for the next.</p>
+
+  <h2>Finishing the prayer</h2>
+  <ol>
+    <li><strong>After the second rakat</strong>, sit and recite the tashahhud (at-tahiyyat).</li>
+    <li>In a <strong>two-rakat prayer</strong> (such as Fajr), continue sitting: recite the salawat on the Prophet (as-salat al-Ibrahimiyya) and a short supplication.</li>
+    <li>End with the <strong>salam</strong>: turn the head to the right saying "As-salamu alaykum wa rahmatullah", then to the left.</li>
+  </ol>
+
+  <h2>Three- and four-rakat prayers</h2>
+  <p>For Maghrib (3 rakats) and Dhuhr, Asr and Isha (4 rakats), recite the tashahhud after the second rakat, then stand for the remaining rakats, reciting only Al-Fatiha in them, and finish with the final sitting and salam. See <a href="/rakats-in-each-prayer/">how many rakats are in each prayer</a>. In Fajr, Maghrib and Isha the imam recites aloud in the first two rakats; Dhuhr and Asr are recited quietly.</p>
+
+  <h2>Differences between schools</h2>
+  <p>The structure above is shared across the Sunni schools of law. Details vary: where the hands are placed while standing, whether they are raised at other points, the exact opening supplication, and some recitations. New Muslims are usually advised to learn from their local mosque or a teacher they trust, and to pray as they are taught while learning the Arabic recitations.</p>
+
+  <h2>Questions</h2>
+  {faq.map(([q, a]) => <><h3>{q}</h3><p>{a}</p></>)}
+</Base>

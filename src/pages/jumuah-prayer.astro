@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+const faq: [string, string][] = [
+  ['What time is Jumuah prayer?', 'Jumu\'ah is held at Dhuhr time on Friday, after the sun passes its highest point. Each mosque sets its own khutbah time within that window, often between about 12:30 and 1:30 pm, and many larger mosques hold two or more sessions. Check your local mosque\'s schedule.'],
+  ['How many rakats is Jumuah?', 'Two obligatory rakats, prayed in congregation after the sermon (khutbah). Many people also pray sunnah prayers before and after, which vary by school.'],
+  ['Is Jumuah compulsory for women?', 'It is obligatory for adult men who are not travelling or ill. Women are welcome to attend; if a woman does not attend, she prays Dhuhr as usual. Anyone who misses Jumu\'ah prays the four-rakat Dhuhr instead.'],
+];
+const schema = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }];
+---
+<Base schema={schema} title="Jumuah Prayer Time and Guide: Friday Prayer Explained" description="Jumu'ah, the Friday prayer: when it is held (Dhuhr time), the khutbah and two rakats, who must attend, recommended sunnah acts, and what to do if you miss it." crumbs={[["Jumu'ah prayer"]]}>
+  <h1>Jumu'ah: the Friday prayer</h1>
+  <p class="hl">Jumu'ah is held on Friday at <strong>Dhuhr time</strong>, in place of the Dhuhr prayer. It consists of a <strong>sermon (khutbah)</strong> followed by <strong>two rakats in congregation</strong>. Mosques set their own khutbah time, so check your local mosque; find the start of Dhuhr in your city on its <a href="/cities/">prayer times page</a>.</p>
+
+  <h2>How Jumu'ah works</h2>
+  <ol>
+    <li><strong>The first adhan</strong> is called when Dhuhr time begins (some mosques call an earlier adhan too).</li>
+    <li><strong>The khutbah:</strong> the imam delivers a sermon in two parts, with a short sitting between them. Listeners stay quiet and attentive.</li>
+    <li><strong>The prayer:</strong> the iqamah is called and the imam leads two rakats, reciting aloud.</li>
+  </ol>
+  <p>Jumu'ah is commanded in the Quran: "O you who believe, when the call is made for prayer on Friday, hasten to the remembrance of God and leave off trade" (Surah Al-Jumu'ah, 62:9).</p>
+
+  <h2>Who must attend</h2>
+  <p>Jumu'ah is obligatory for adult Muslim men who are resident (not travelling) and able. Women, children, travellers and the sick are not required to attend but may, and when they do, Jumu'ah replaces their Dhuhr. Those who do not attend pray the normal four rakats of <a href="/dhuhr-time/">Dhuhr</a>.</p>
+
+  <h2>Recommended acts on Friday</h2>
+  <ul>
+    <li>Taking a full bath (ghusl) and wearing clean clothes; see <a href="/how-to-perform-wudu/">wudu and ghusl</a>.</li>
+    <li>Arriving early and sitting close to the imam.</li>
+    <li>Reciting Surah Al-Kahf during Friday.</li>
+    <li>Sending many blessings on the Prophet, and making du'a, especially in the last hour before Maghrib.</li>
+  </ul>
+
+  <h2>In the US, UK and Canada</h2>
+  <p>Because Dhuhr starts later in summer (daylight saving time) than in winter, many mosques move their khutbah time twice a year. Workplaces and schools in the US are generally expected to make reasonable accommodation for religious practice, and many Muslims arrange an extended lunch break on Fridays.</p>
+
+  <h2>Questions</h2>
+  {faq.map(([q, a]) => <><h3>{q}</h3><p>{a}</p></>)}
+</Base>

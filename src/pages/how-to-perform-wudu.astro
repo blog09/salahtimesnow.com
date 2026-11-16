@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+const steps: [string, string][] = [
+  ['Intention and bismillah', 'Make the intention in your heart to perform wudu, and say "Bismillah" (in the name of God).'],
+  ['Hands', 'Wash both hands up to the wrists, three times, including between the fingers.'],
+  ['Mouth', 'Rinse the mouth three times.'],
+  ['Nose', 'Sniff water into the nose and blow it out, three times.'],
+  ['Face', 'Wash the whole face, from the hairline to the chin and from ear to ear, three times.'],
+  ['Arms', 'Wash the right arm up to and including the elbow three times, then the left.'],
+  ['Head', 'Wipe the head once with wet hands, from the front to the back and back again.'],
+  ['Ears', 'Wipe the inside of the ears with the index fingers and the back with the thumbs.'],
+  ['Feet', 'Wash the right foot up to and including the ankle three times, then the left, including between the toes.'],
+];
+const faq: [string, string][] = [
+  ['What breaks wudu?', 'Commonly agreed causes include using the toilet (urine, feces or passing wind), deep sleep, and losing consciousness. Schools differ on some other things, such as bleeding or touching the skin of the opposite sex.'],
+  ['Can I pray more than one prayer with one wudu?', 'Yes. Wudu remains valid until something breaks it, so you can pray several prayers with the same wudu.'],
+  ['What if there is no water?', 'Tayammum (dry ablution) is performed instead: strike clean earth or dust with the palms and wipe the face, then the hands. It is also allowed when using water would cause harm.'],
+];
+const schema = [{ '@context': 'https://schema.org', '@type': 'HowTo', name: 'How to perform wudu', step: steps.map(([n, t]) => ({ '@type': 'HowToStep', name: n, text: t })) },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }];
+---
+<Base schema={schema} title="How to Perform Wudu Step by Step (Ablution Before Salah)" description="How to perform wudu, the ablution before prayer, in nine steps: hands, mouth, nose, face, arms, head, ears and feet, plus what breaks wudu and when tayammum is used." crumbs={[['How to perform wudu']]}>
+  <h1>How to perform wudu</h1>
+  <p class="hl">Wudu is the washing done before <a href="/how-to-pray-salah/">salah</a>. With the intention and "Bismillah", wash the <strong>hands, mouth, nose and face</strong>, then the <strong>arms to the elbows</strong>, <strong>wipe the head and ears</strong>, and wash the <strong>feet to the ankles</strong>, right side before left. Most steps are done three times.</p>
+
+  <h2>Step by step</h2>
+  <div class="tbl"><table>
+    <thead><tr><th class="n">#</th><th>Part</th><th>What to do</th></tr></thead>
+    <tbody>{steps.map(([n, t], i) => <tr><td class="n">{i + 1}</td><td>{n}</td><td style="white-space:normal">{t}</td></tr>)}</tbody>
+  </table></div>
+  <p>The Quran names the essential parts in Surah Al-Ma'idah (5:6): washing the face and the arms to the elbows, wiping the head, and washing the feet to the ankles. The other steps follow the practice of the Prophet. Afterwards many Muslims recite the shahada.</p>
+
+  <h2>Tips</h2>
+  <ul>
+    <li>Use water without wasting it: the Prophet is reported to have performed wudu with a small amount of water.</li>
+    <li>Make sure water reaches all of each part, including between fingers and toes and around the heels.</li>
+    <li>Nail polish that blocks water from the nails prevents a valid wudu in the view of most scholars.</li>
+    <li>Wiping over clean leather socks (khuffs), or socks in some schools, is allowed for a limited time instead of washing the feet.</li>
+  </ul>
+
+  <h2>When a full bath (ghusl) is needed</h2>
+  <p>Some states require ghusl, washing the whole body, instead of wudu: after sexual intercourse, and after menstruation and post-natal bleeding end. Ghusl is also recommended before the Friday prayer (<a href="/jumuah-prayer/">Jumu'ah</a>) and the Eid prayers.</p>
+
+  <h2>Questions</h2>
+  {faq.map(([q, a]) => <><h3>{q}</h3><p>{a}</p></>)}
+  <p><a href="/cities/">Prayer times for your city</a> · <a href="/qibla-direction/">Qibla direction</a></p>
+</Base>

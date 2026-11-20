@@ -30,6 +30,7 @@ const eid = new Date(Date.UTC(last![0], last![1] - 1, last![2] + 1));
     <tbody>{rows.map(({ c, r }) => <tr><td><a href={cityUrl(c)}>{shortLabel(c)}</a></td><td class="n">{r.sehriFirst}</td><td class="n">{r.iftarFirst}</td><td class="n">{r.sehriLast}</td><td class="n">{r.iftarLast}</td><td class="n">{r.fastLast}</td></tr>)}</tbody>
   </table></div>
   <p class="small">Days lengthen through the month, because Ramadan 2027 falls in the northern late winter. Daylight saving begins on March 14 in the US and Canada, after this Ramadan ends; UK clocks change on March 28.</p>
+  <p>Working out what you owe this year? Use the <a href="/zakat-calculator/">zakat calculator</a>.</p>
 </Base>
 <script>
   import { times, clock, span, shortDate } from '../lib/salah.mjs';

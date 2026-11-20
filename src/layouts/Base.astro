@@ -1,7 +1,8 @@
 ---
 import { mark } from '../brand.mjs';
-interface Props { title: string; description: string; schema?: object[]; crumbs?: [string, string?][] }
-const { title, description, schema = [], crumbs = [] } = Astro.props;
+interface Props { title: string; description: string; schema?: object[]; crumbs?: [string, string?][]; image?: string; byline?: boolean }
+const { title, description, schema = [], crumbs = [], image = '/og.png', byline = true } = Astro.props;
+const REVIEWED = 'November 2026';
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const home = new URL('/', Astro.site).href;
 // Google shows ~155-160 characters: trim long descriptions at a word boundary
@@ -23,7 +24,7 @@ if (crumbs.length) ld.push({ '@context': 'https://schema.org', '@type': 'Breadcr
 <meta property="og:title" content={title} />
 <meta property="og:description" content={desc} />
 <meta property="og:url" content={canonical} />
-<meta property="og:image" content={new URL('/og.png', Astro.site).href} />
+<meta property="og:image" content={new URL(image, Astro.site).href} />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#064e3b" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -50,6 +51,13 @@ if (crumbs.length) ld.push({ '@context': 'https://schema.org', '@type': 'Breadcr
   .prayers div.next { background:#064e3b; border-color:#064e3b; color:#fff; } .prayers div.next span { color:#a7f3d0; } .prayers div.next b { color:#fff; }
   .prayers b { display:block; font-size:23px; color:var(--deep); font-variant-numeric:tabular-nums; }
   .prayers span { font-size:14px; color:var(--soft); }
+  .nextp { display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 12px; background:linear-gradient(90deg,#064e3b,#047857); color:#fff; border-radius:14px; padding:14px 18px; margin:12px 0 4px; }
+  .nextp .lbl { font-size:14px; color:#a7f3d0; width:100%; }
+  .nextp b { font-size:30px; line-height:1.1; }
+  .nextp [data-next-at] { font-size:20px; }
+  .nextp .cd { font-size:20px; font-weight:700; font-variant-numeric:tabular-nums; color:#fde68a; margin-left:auto; }
+  .printbtn { font:inherit; font-size:15px; padding:8px 14px; border:1px solid var(--line); border-radius:10px; background:#fff; cursor:pointer; }
+  @media print { header, footer, nav, .tool, .nextp, .noprint, .near, .byline, .kit, [data-kit] { display:none !important; } body { background:#fff; } h2 { margin-top:8px; } table { font-size:11.5px; } }
   .tbl { overflow-x:auto; } table { width:100%; border-collapse:collapse; font-size:15px; background:#fff; }
   th, td { padding:6px 9px; border-bottom:1px solid var(--line); text-align:left; white-space:nowrap; } th { color:var(--soft); font-size:13.5px; font-weight:600; }
   td.n, th.n { text-align:right; font-variant-numeric:tabular-nums; }
@@ -66,6 +74,8 @@ if (crumbs.length) ld.push({ '@context': 'https://schema.org', '@type': 'Breadcr
   @media (max-width:700px) { .pair { grid-template-columns:1fr; } }
   footer { margin-top:44px; border-top:1px solid var(--line); background:#fff; font-size:14.5px; color:var(--soft); }
   footer .col { padding-top:18px; padding-bottom:24px; }
+  .byline { font-size:13.5px; color:#64748b; border-top:1px solid #e2e8f0; margin-top:36px; padding-top:12px; }
+  .fig { margin:18px 0; } .fig img { width:100%; height:auto; border:1px solid #e2e8f0; border-radius:12px; display:block; } .fig figcaption { font-size:14px; color:#64748b; margin-top:6px; }
 </style>
 <!-- save & share kit -->
 <link rel="manifest" href="/manifest.webmanifest" />
@@ -79,6 +89,7 @@ if (crumbs.length) ld.push({ '@context': 'https://schema.org', '@type': 'Breadcr
 <main class="col">
   {crumbs.length > 0 && <p class="crumb"><a href="/">Home</a>{crumbs.map(([n, u]) => <> › {u ? <a href={u}>{n}</a> : n}</>)}</p>}
   <slot />
+  {byline && <p class="byline" set:html={`Reviewed ${REVIEWED} · <a href="/sources/">sources</a>`} />}
 </main>
 <footer><div class="col">
   <p><strong>SalahTimesNow</strong> calculates prayer times from the sun's position for each city. They are astronomical estimates: your local mosque's timetable comes first, especially for iqamah and Jumu'ah.</p>

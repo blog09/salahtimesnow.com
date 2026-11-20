@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import D from '../data/img-dims.json';
 import { METHODS, methodAngles, times, clock, todayIn } from '../lib/salah.mjs';
 import { bySlug, shortLabel, cityUrl } from '../lib/site';
 const samples = ['new-york', 'london', 'toronto'].map(bySlug);
@@ -20,6 +21,7 @@ const rows = Object.keys(METHODS).map((k) => ({ k, a: methodAngles(k) }));
     <thead><tr><th>Method</th><th class="n">Fajr angle</th><th class="n">Isha</th><th>Where it is used</th></tr></thead>
     <tbody>{rows.map(({ k, a }) => <tr><td>{(METHODS as any)[k]}</td><td class="n">{a.fajr}°</td><td class="n">{a.ishaInterval ? `${a.ishaInterval} min after Maghrib` : `${a.isha}°`}</td><td style="white-space:normal">{USED[k]}</td></tr>)}</tbody>
   </table></div>
+  <figure class="fig"><img src="/img/fajr-angle-by-method.png" width={D["/img/fajr-angle-by-method.png"][0]} height={D["/img/fajr-angle-by-method.png"][1]} loading="lazy" alt="Bar chart of the Fajr sun angle by calculation method: Egyptian 19.5 degrees, Umm al-Qura 18.5, Muslim World League, Karachi and Moonsighting Committee 18, ISNA 15" /></figure>
   {samples.map((c) => { const [y, m, d] = todayIn(c.tz); return <>
     <h2>Today in <a href={cityUrl(c)}>{shortLabel(c)}</a> under each method</h2>
     <div class="tbl"><table>

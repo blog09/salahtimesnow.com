@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+const faq: [string, string][] = [
+  ['How much zakat do I pay?', 'Zakat is 2.5% (one fortieth) of your zakatable wealth, if that wealth has stayed at or above the nisab for one full lunar year (hawl). On $10,000 of zakatable savings, zakat is $250.'],
+  ['What is the nisab?', 'The nisab is the minimum wealth on which zakat is due: the value of 85 grams of gold or 595 grams of silver. Because silver is far cheaper, the silver nisab is much lower. Many scholars and zakat organisations recommend the silver nisab for cash savings because more people then pay and more reaches the poor; others use gold. Ask your local scholar which your community follows.'],
+  ['What counts as zakatable wealth?', 'Cash at home and in the bank, gold and silver, money others owe you that you expect to be repaid, shares and investments held for growth or trade, and business stock for sale. Your home, car, household goods and work tools are not zakatable. Debts you must pay now can be deducted.'],
+  ['When should I pay zakat?', 'Once a lunar year has passed on wealth above the nisab. Many people choose a fixed date, often in Ramadan, and calculate everything on that day each year.'],
+];
+const schema = [
+  { '@context': 'https://schema.org', '@type': 'WebApplication', name: 'Zakat calculator', applicationCategory: 'FinanceApplication', operatingSystem: 'Any', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' } },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
+];
+const fields: [string, string][] = [['cash', 'Cash at home and in bank accounts'], ['gold', 'Value of gold you own'], ['silver', 'Value of silver you own'], ['owed', 'Money owed to you (likely to be repaid)'], ['invest', 'Shares and investments (market value)'], ['stock', 'Business stock for sale'], ['other', 'Other zakatable savings']];
+---
+<Base title="Zakat Calculator: How Much Zakat Do I Pay? (Nisab in Gold or Silver)" description="Free zakat calculator: add your cash, gold, silver, investments and business stock, subtract debts due, and see if you are above the nisab and how much 2.5% zakat to pay." schema={schema} crumbs={[['Zakat calculator']]}>
+  <h1>Zakat calculator</h1>
+  <p class="answer">Zakat is <strong>2.5% of your zakatable wealth</strong> once it has stayed above the <strong>nisab</strong>, the value of <strong>85 g of gold or 595 g of silver</strong>, for a full lunar year. Enter today's gold or silver price and your totals below, in any one currency.</p>
+
+  <form class="zk" id="zk" onsubmit="return false">
+    <fieldset><legend>Nisab</legend>
+      <label><input type="radio" name="basis" value="silver" checked /> Silver (595 g), lower threshold</label>
+      <label><input type="radio" name="basis" value="gold" /> Gold (85 g)</label>
+      <label class="w"><span>Price per gram of <b data-metal>silver</b> today</span><input name="price" type="number" min="0" step="0.01" placeholder="e.g. 1.05" /></label>
+    </fieldset>
+    <fieldset><legend>What you own</legend>
+      {fields.map(([k, l]) => <label class="w">{l}<input name={k} type="number" min="0" step="0.01" placeholder="0" /></label>)}
+    </fieldset>
+    <fieldset><legend>Deduct</legend>
+      <label class="w">Debts and bills you must pay now<input name="debts" type="number" min="0" step="0.01" placeholder="0" /></label>
+    </fieldset>
+  </form>
+  <div class="zk-out" aria-live="polite"></div>
+  <p class="small">Gold and silver prices change daily: look up the price per gram from a bullion dealer or your bank before you calculate. This calculator does not store or send anything you type.</p>
+
+  <h2>How zakat is worked out</h2>
+  <ol>
+    <li><strong>Add up zakatable wealth</strong> on your zakat date: cash, gold and silver, money owed to you, investments and business stock.</li>
+    <li><strong>Subtract debts due now</strong>, such as bills and instalments that are due.</li>
+    <li><strong>Compare with the nisab.</strong> If the total is at or above it and has been for a lunar year, zakat is due.</li>
+    <li><strong>Pay 2.5%</strong> of the total. For example, $12,000 × 0.025 = $300.</li>
+  </ol>
+  <p>Scholars differ on details such as jewellery worn every day, retirement accounts and which nisab to use for cash. When in doubt, ask a scholar at your local mosque; the <a href="/cities/">city pages</a> list mosques near you.</p>
+
+  <h2>Questions</h2>
+  {faq.map(([q, a]) => <><h3>{q}</h3><p>{a}</p></>)}
+
+  <style>
+    .zk { display:grid; gap:12px; margin:16px 0; }
+    .zk fieldset { border:1px solid var(--line); border-radius:12px; padding:12px 14px; display:grid; gap:8px; background:#fff; }
+    .zk legend { font-weight:700; padding:0 6px; }
+    .zk label.w { display:grid; grid-template-columns:1fr 160px; gap:10px; align-items:center; }
+    .zk input[type=number] { font:inherit; font-size:17px; padding:6px 8px; border:1px solid #94a3b8; border-radius:8px; width:100%; }
+    .zk-out { background:#ecfdf5; border:1px solid #a7f3d0; border-radius:12px; padding:14px 18px; font-size:18px; }
+    @media (max-width:560px) { .zk label.w { grid-template-columns:1fr; } }
+  </style>
+  <script is:inline>
+    (function () {
+      var f = document.getElementById('zk'), out = document.querySelector('.zk-out');
+      var n = function (k) { return Math.max(0, parseFloat(f.elements[k].value) || 0); };
+      var money = function (x) { return x.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
+      function run() {
+        var basis = f.querySelector('input[name="basis"]:checked').value;
+        document.querySelector('[data-metal]').textContent = basis;
+        var grams = basis === 'gold' ? 85 : 595, price = n('price');
+        var assets = ['cash', 'gold', 'silver', 'owed', 'invest', 'stock', 'other'].reduce(function (a, k) { return a + n(k); }, 0);
+        var net = Math.max(0, assets - n('debts'));
+        if (!price) { out.innerHTML = 'Zakatable wealth: <strong>' + money(net) + '</strong>. Enter today’s ' + basis + ' price per gram to check the nisab. 2.5% of this total is <strong>' + money(net * 0.025) + '</strong>.'; return; }
+        var nisab = grams * price;
+        out.innerHTML = 'Nisab (' + grams + ' g of ' + basis + '): <strong>' + money(nisab) + '</strong>. Your zakatable wealth: <strong>' + money(net) + '</strong>.<br>'
+          + (net >= nisab ? 'You are above the nisab. Zakat due: <strong style="font-size:26px">' + money(net * 0.025) + '</strong> (2.5%), if this wealth has been held for a lunar year.' : 'You are below the nisab, so no zakat is due on this wealth. You may still give voluntary charity (sadaqah).');
+      }
+      f.addEventListener('input', run); run();
+    })();
+  </script>
+</Base>

@@ -9,7 +9,8 @@ const t = today(city);
 const month = monthRows(city);
 ---
 <div class="live" data-lat={city.lat} data-lon={city.lon} data-tz={city.tz} data-method={method}>
-  <p class="small"><strong data-date>{longDate(t.y, t.m, t.d)}</strong> · <span data-hijri>{hijriText(t.y, t.m, t.d)}</span> <span data-next></span></p>
+  <p class="small"><strong data-date>{longDate(t.y, t.m, t.d)}</strong> · <span data-hijri>{hijriText(t.y, t.m, t.d)}</span></p>
+  <div class="nextp" aria-live="polite"><span class="lbl">Next prayer</span><b data-next-name>&nbsp;</b><span data-next-at></span><span class="cd" data-next></span></div>
   <div class="prayers">
     {PRAYERS.map(([k, n]) => <div data-p={k}><span>{n}</span><b>{t.cells[k]}</b></div>)}
   </div>
@@ -22,6 +23,7 @@ const month = monthRows(city);
       <select data-asr-select><option value="standard">Standard (Shafi'i, Maliki, Hanbali)</option><option value="hanafi">Hanafi</option></select>
     </label>
   </div>
+  <p class="noprint"><button type="button" class="printbtn" data-print>Print this month's timetable</button></p>
   <h2 data-month-title>{city.name} prayer timetable for {monthName(month.y, month.m)}</h2>
   <div class="tbl"><table>
     <thead><tr><th>Date</th><th>Hijri</th>{PRAYERS.map(([, n]) => <th class="n">{n}</th>)}</tr></thead>
@@ -39,6 +41,13 @@ const month = monthRows(city);
     if (savedM && [...mSel.options].some((o) => o.value === savedM)) mSel.value = savedM;
     if (savedA) aSel.value = savedA;
     const set = (sel: string, v: string) => { const el = root.querySelector(sel); if (el) el.textContent = v; };
+    let nextAt: number | null = null;
+    function tick() {
+      if (nextAt == null) return;
+      const s = Math.max(0, Math.round((nextAt - Date.now()) / 1000)), h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+      set('[data-next]', `in ${h ? h + ' hr ' : ''}${m} min ${String(sec).padStart(2, '0')} s`);
+      if (s === 0) render();
+    }
     function render() {
       const [y, m, d] = todayIn(tz), hanafi = aSel.value === 'hanafi', meth = mSel.value;
       const p: any = times(la, lo, y, m, d, meth, hanafi);
@@ -50,8 +59,11 @@ const month = monthRows(city);
         const k = el.dataset.p!; el.querySelector('b')!.textContent = clock(p[k], tz);
         el.classList.toggle('next', !!upcoming && upcoming[0] === k);
       });
-      if (upcoming) { const min = Math.max(1, Math.round((p[upcoming[0]].getTime() - now) / 60000)); set('[data-next]', `· ${upcoming[1]} in ${min >= 60 ? Math.floor(min / 60) + ' hr ' : ''}${min % 60} min`); }
-      else set('[data-next]', '· Isha has started');
+      nextAt = upcoming ? p[upcoming[0]].getTime() : null;
+      set('[data-next-name]', upcoming ? upcoming[1] : 'Fajr tomorrow');
+      set('[data-next-at]', upcoming ? 'at ' + clock(p[upcoming[0]], tz) : '');
+      if (!upcoming) { const [ty, tm, td] = todayIn(tz, new Date(now + 864e5)); const f: any = times(la, lo, ty, tm, td, meth, hanafi); nextAt = f.fajr.getTime(); set('[data-next-at]', 'at ' + clock(f.fajr, tz)); }
+      tick();
       const name = root.querySelector('[data-month-title]');
       if (name) name.textContent = name.textContent!.replace(/for .*/, 'for ' + monthName(y, m));
       const body = root.querySelector('[data-month]');
@@ -64,5 +76,7 @@ const month = monthRows(city);
     aSel.addEventListener('change', () => { store.set('asr', aSel.value); render(); });
     render();
     setInterval(render, 60000);
+    setInterval(tick, 1000);
+    root.querySelector('[data-print]')?.addEventListener('click', () => window.print());
   });
 </script>
